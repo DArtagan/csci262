@@ -1,0 +1,10 @@
+Lab 1
+
+When a value of 0 is entered, a prompt is displayed which mentions a debug error and that an abort has been called.  In the command execution window, it says that an assertion failed and gives the condition and line number of that assertion.  
+cout always gives zero because value was initialized as a integerm, it does not store any decimal values and any operations done with that integer (if only integers are involved) are also treated as integers.  If value was initialized as a double, then it could store values beyond the decimal point. 
+// A memory leak is when memory is not returned by the program to the operating system for use by other programs.  A dangling pointer is a pointer that is referencing an address in memory that has been returned to the operating system.  It is no longer a valid address that the pointer points to.  
+This is amemory leak.
+This line tells the program to go to the spot that ptr references and output that value.  The problem is that the pointer does not refer to a valid location and in accessing that location generates a warning that states this access violation.
+This is once again a dangling pointer.  It is not an issue of memory not being returned to the operating system, but that the pointer is referencing a location that is no longer valid.  
+5
+3
