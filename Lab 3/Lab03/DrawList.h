@@ -11,13 +11,13 @@
 namespace CS262 {
 	class DrawList {
 		public:
-			// typedefs and member constants
+			// typedefs and constants
 			typedef MyRect value_type;
 			typedef std::size_t size_type;
-			static const size_type CAPACITY = 30;
+			size_type DEFAULT_CAPACITY = 3;
 
 			//constructors
-			DrawList() : used(0), current_index(0) {}
+			DrawList() : used(0), current_index(0), capacity(DEFAULT_CAPACITY) {}
 
 			//operators
 			void operator ++();
@@ -33,5 +33,6 @@ namespace CS262 {
 		private:
 			value_type MyRects[CAPACITY];
 			size_type used, current_index;
+			size_type capacity;
 	};
 }

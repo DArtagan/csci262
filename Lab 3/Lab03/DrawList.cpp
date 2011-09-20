@@ -3,6 +3,7 @@
 using namespace std;
 
 namespace CS262{
+	
 	// Operators
 	void DrawList::operator ++() {
 		assert(!end());
@@ -17,7 +18,7 @@ namespace CS262{
 
 	// Functions
 	void DrawList::insert(const value_type& entry) {
-		assert(used < CAPACITY);
+		assert(used < capacity);
 		MyRects[used] = entry;
 		used++;
 	}
