@@ -4,10 +4,8 @@
 #include "Color.h"
 #include "Point.h"
 
-namespace CS262
-{
-	class MyRect
-	{
+namespace CS262 {
+	class MyRect {
 	public:
 		// CONSTRUCTORS
 		MyRect() : Point1(10,10), Point2(100,100), color(Color(0,0,0)), filled(true) {}

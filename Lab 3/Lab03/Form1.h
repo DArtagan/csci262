@@ -1,5 +1,6 @@
 #pragma once
 #include "MyRect.h"
+#include "DrawList.h"
 
 namespace ProgramForm {
 
@@ -18,6 +19,9 @@ namespace ProgramForm {
 	CS262::Point startPoint;
 	CS262::Color drawColor;
 	bool drawFilled = true;
+
+	// list of rectangles
+	DrawList list;
 
 	/// <summary>
 	/// Summary for Form1
@@ -103,7 +107,8 @@ namespace ProgramForm {
 			// exitToolStripMenuItem
 			// 
 			this->exitToolStripMenuItem->Name = L"exitToolStripMenuItem";
-			this->exitToolStripMenuItem->Size = System::Drawing::Size(92, 22);
+			this->exitToolStripMenuItem->ShortcutKeyDisplayString = L"Esc";
+			this->exitToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->exitToolStripMenuItem->Text = L"Exit";
 			this->exitToolStripMenuItem->Click += gcnew System::EventHandler(this, &Scene::exitToolStripMenuItem_Click);
 			// 
@@ -118,14 +123,16 @@ namespace ProgramForm {
 			// filledToolStripMenuItem
 			// 
 			this->filledToolStripMenuItem->Name = L"filledToolStripMenuItem";
-			this->filledToolStripMenuItem->Size = System::Drawing::Size(122, 22);
+			this->filledToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Alt | System::Windows::Forms::Keys::F));
+			this->filledToolStripMenuItem->Size = System::Drawing::Size(160, 22);
 			this->filledToolStripMenuItem->Text = L"Set Filled";
 			this->filledToolStripMenuItem->Click += gcnew System::EventHandler(this, &Scene::setFilledToolStripMenuItem_Click);
 			// 
 			// setColorToolStripMenuItem
 			// 
 			this->setColorToolStripMenuItem->Name = L"setColorToolStripMenuItem";
-			this->setColorToolStripMenuItem->Size = System::Drawing::Size(122, 22);
+			this->setColorToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Alt | System::Windows::Forms::Keys::C));
+			this->setColorToolStripMenuItem->Size = System::Drawing::Size(160, 22);
 			this->setColorToolStripMenuItem->Text = L"Set Color";
 			this->setColorToolStripMenuItem->Click += gcnew System::EventHandler(this, &Scene::setColorToolStripMenuItem_Click);
 			// 
@@ -154,6 +161,7 @@ namespace ProgramForm {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"Scene";
 			this->Text = L"Form1";
+			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &Scene::Scene_KeyDown);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
@@ -192,6 +200,10 @@ namespace ProgramForm {
 				 myRect.setPoint2(CS262::Point(Convert::ToSingle(e->X), Convert::ToSingle(e->Y)));
 				 myRect.setColor(drawColor);
 				 myRect.setFilled(drawFilled);
+
+				 // Now insert myRect into the list 
+				 list.insert(myRect);
+
 				 pictureBox1->Invalidate();
 			 }
 
@@ -201,6 +213,18 @@ namespace ProgramForm {
 			 // Need graphics context for drawing				 
 			 Graphics^ g = e->Graphics;
 			 Draw( g );
+		 }
+
+	private: System::Void Scene_KeyDown(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
+			 if (e->KeyCode == System::Windows::Forms::Keys::Delete && list.size() > 0)
+			 {
+				 list.remove_last();
+				 this->pictureBox1->Invalidate();
+			 }
+			 else if (e->KeyCode == System::Windows::Forms::Keys::Escape)
+			 {
+				 Application::Exit();
+			 }
 		 }
 };
 }

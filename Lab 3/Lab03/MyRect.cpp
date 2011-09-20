@@ -1,5 +1,6 @@
 #include "MyRect.h"
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 using System::Drawing::Color;
@@ -8,7 +9,7 @@ using System::Drawing::Graphics;
 using namespace System::Drawing;
 using namespace System::Drawing::Drawing2D;
 
-void CS262::MyRect::draw(System::Drawing::Graphics^) {
+void CS262::MyRect::draw(System::Drawing::Graphics^ g) {
 	float height, width, x, y;
 
 	height = fabs(Point1.getY()-Point2.getY());
@@ -29,6 +30,6 @@ void CS262::MyRect::draw(System::Drawing::Graphics^) {
 	else  // draw just outline using pen
 	{
 		Pen^ pen = gcnew Pen(drawColor);
-		g->DrawRectangle(pen, x, y, width, height); 
+		g->DrawRectangle(pen, x, y, width, height);
 	}
 }
