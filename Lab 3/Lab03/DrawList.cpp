@@ -5,7 +5,7 @@ using namespace std;
 namespace CS262{
 	
 	// Constructors and Destructors
-	DrawList::DrawList(size_type initial_capacity) {
+	DrawList::DrawList(const size_type initial_capacity) {
 		MyRects = new value_type*[initial_capacity];
 		capacity = initial_capacity;
 		current_index = 0;

@@ -1,5 +1,11 @@
-// FILE: DrawList.h
-// CLASS PROVIDED: DrawList
+/********************************
+Name: William H. Weiskopf
+Section: A
+Date: September 20, 2011
+
+Purpose: typedef is utilized to simplify the declarations of functions and data types.  The biggest feature of this program is learing dynamic allocation and pointers through the use of an array to store the MyRect objects. Finally, there is the Big Three (constructor, assignment, and destructor).  Creating these is similar to many of the other functions created in this program, but these three are essential for basic class functionallity.  
+********************************/
+#pragma once
 
 #pragma once
 #include <iostream>
@@ -18,7 +24,7 @@ namespace CS262 {
 			static const size_type DEFAULT_CAPACITY = 3;
 
 			//constructors and destructors
-			DrawList(size_type initial_capacity = DEFAULT_CAPACITY);
+			DrawList(const size_type initial_capacity = DEFAULT_CAPACITY);
 			DrawList(const DrawList& source);
 			~DrawList();
 
