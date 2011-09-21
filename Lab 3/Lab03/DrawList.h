@@ -25,11 +25,11 @@ namespace CS262 {
 			//operators
 			DrawList& operator =(const DrawList& source);
 			void operator ++();
-			value_type* operator *() const;
+			value_type operator *() const;
 
 			//functions
 			void insert(const value_type& entry);
-			void reserve();
+			void reserve(size_type new_size);
 			void remove_last();
 			size_type size() const {return used;}
 			void begin() {current_index = 0;}
