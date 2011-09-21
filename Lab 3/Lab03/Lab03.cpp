@@ -12,9 +12,15 @@ void Scene::Init( )	// Actions and settings before the scene is drawn
 
 }
 
-void Scene::Draw( Graphics^ g ) // 	// Actions performed every time when the scene is redrawn
+void Scene::Draw( Graphics^ g )
 {
-	myRect.draw( g );
+    MyRect drawRect;
+
+    for (list.begin(); !list.end(); ++list)
+    {
+        drawRect = *list;
+        drawRect.draw(g);
+    }
 }
 
 
