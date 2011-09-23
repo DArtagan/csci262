@@ -21,7 +21,7 @@ namespace CS262 {
 		System::Drawing::Color drawColor = color.getNetColor();
 
 		// YOUR NAME FOR drawFilled MAY BE DIFFERENT
-		if (filled)  // create solid brush for drawing
+		if (drawFilled)  // create solid brush for drawing
 		{
 			Brush^ hbr = gcnew SolidBrush(drawColor);
 			g->FillRectangle(hbr, x, y, width, height);

@@ -88,14 +88,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="DrawList.cpp" />
     <ClCompile Include="Lab04.cpp" />
+    <ClCompile Include="MyRect.cpp" />
     <ClCompile Include="MyShape.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color.h" />
+    <ClInclude Include="DrawList.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyRect.h" />
     <ClInclude Include="MyShape.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="resource.h" />
