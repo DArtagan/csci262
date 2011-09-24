@@ -1,15 +1,17 @@
-﻿Build started 9/24/2011 1:53:14 PM.
-     1>Project "C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 4\Lab04\Lab04.vcxproj" on node 2 (ClCompile target(s)).
-     1>GenerateTargetFrameworkMonikerAttribute:
+﻿Build started 9/24/2011 2:18:50 PM.
+     1>Project "C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 4\Lab04\Lab04.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\Lab04.unsuccessfulbuild".
+       GenerateTargetFrameworkMonikerAttribute:
        Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt MyRect.cpp /clr:nostdlib -D_SCL_SECURE_NO_WARNINGS 
-         MyRect.cpp
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 4\lab04\MyRect.h(17): error C2614: 'CS262::MyRect' : illegal member initialization: 'color' is not a base or member
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 4\lab04\MyRect.h(17): error C2614: 'CS262::MyRect' : illegal member initialization: 'Point2' is not a base or member
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 4\lab04\MyRect.h(17): error C2614: 'CS262::MyRect' : illegal member initialization: 'Point1' is not a base or member
-     1>Done Building Project "C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 4\Lab04\Lab04.vcxproj" (ClCompile target(s)) -- FAILED.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Lab04.cpp MyLine.cpp /clr:nostdlib -D_SCL_SECURE_NO_WARNINGS 
+         Lab04.cpp
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 4\lab04\Form1.h(418): error C2661: 'CS262::MyLine::MyLine' : no overloaded function takes 3 arguments
+         MyLine.cpp
+         Generating Code...
+     1>Done Building Project "C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 4\Lab04\Lab04.vcxproj" (build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:00.59
+Time Elapsed 00:00:01.14
