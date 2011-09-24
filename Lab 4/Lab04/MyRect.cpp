@@ -8,7 +8,7 @@ using namespace System::Drawing;
 using namespace System::Drawing::Drawing2D;
 
 namespace CS262 {
-	void MyRect::draw(System::Drawing::Graphics^ g) {
+	void MyRect::draw(System::Drawing::Graphics^ g) const {
 		float height, width, x, y;
 
 		height = fabs(Point1.getY()-Point2.getY());
@@ -17,10 +17,8 @@ namespace CS262 {
 		y = min(Point1.getY(),Point2.getY());
 
 		// convert color variable from our Color class to .Net color
-		// YOUR NAME FOR color MAY BE DIFFERENT
 		System::Drawing::Color drawColor = color.getNetColor();
 
-		// YOUR NAME FOR drawFilled MAY BE DIFFERENT
 		if (drawFilled)  // create solid brush for drawing
 		{
 			Brush^ hbr = gcnew SolidBrush(drawColor);
@@ -31,5 +29,11 @@ namespace CS262 {
 			Pen^ pen = gcnew Pen(drawColor);
 			g->DrawRectangle(pen, x, y, width, height);
 		}
+	}
+	
+	// return a pointer to a copy of the calling object (*this)
+	MyShape* MyRect::makeClone() const
+	{
+		return new MyRect(*this);
 	}
 }

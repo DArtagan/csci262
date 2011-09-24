@@ -15,6 +15,7 @@ namespace CS262 {
 			// CONSTRUCTORS
 			MyRect() : drawFilled(true) { } // initializes all properties of the rectangle to default values
 			MyRect(Point thePoint1, Point thePoint2, Color theColor=Color(0,0,0), bool isFilled=true) : Point1(thePoint1), Point2(thePoint2), color(theColor), drawFilled(isFilled) {} //Initializes MyRect to given values
+			MyShape* makeClone() const;
 
 			// ACCESSORS
 		
@@ -26,8 +27,7 @@ namespace CS262 {
 			void setFilled(bool isFilled ) { drawFilled = isFilled; }
 
 			// FUNCTIONS
-			void draw(System::Drawing::Graphics^); //Note: You might want to take out the carrot
-
+			void draw(System::Drawing::Graphics^ g) const;
 			// Postcondition: Returns true if x and y values are the same,
 			// false otherwise
 		
@@ -35,8 +35,6 @@ namespace CS262 {
 		private: 
 			// x and y are represented in our Point class as float to
 			// faciliate calculations.
-			Point Point1, Point2;
-			Color color;
 			bool drawFilled;
 	};
 

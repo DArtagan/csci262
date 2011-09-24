@@ -90,6 +90,8 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="DrawList.cpp" />
     <ClCompile Include="Lab04.cpp" />
+    <ClCompile Include="MyLine.cpp" />
+    <ClCompile Include="MyOval.cpp" />
     <ClCompile Include="MyRect.cpp" />
     <ClCompile Include="MyShape.cpp" />
   </ItemGroup>
@@ -99,6 +101,8 @@
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyLine.h" />
+    <ClInclude Include="MyOval.h" />
     <ClInclude Include="MyRect.h" />
     <ClInclude Include="MyShape.h" />
     <ClInclude Include="Point.h" />

@@ -12,13 +12,13 @@ Purpose: Gain further experience with class creation and use.  Practice the use 
 #include "Point.h"
 
 namespace CS262 {
-	class MyRect {
+	class MyShape {
 		public:
 			// CONSTRUCTORS
-			MyRect() : Point1(10,10), Point2(100,100), color(Color(0,0,0)) {}
+			MyShape() : Point1(10,10), Point2(100,100), color(Color(0,0,0)) {}
 
-			// Postcondition: MyRect has been initialized to (thePoint1, thePoint2, theColor, isFilled) with theColor defaulting to black and isFilled defaulting to true
-			MyRect(Point thePoint1, Point thePoint2, Color theColor=Color(0,0,0)) : Point1(thePoint1), Point2(thePoint2), color(theColor), drawFilled(isFilled) {}
+			// Postcondition: MyShape has been initialized to (thePoint1, thePoint2, theColor) with theColor defaulting to black
+			MyShape(Point thePoint1, Point thePoint2, Color theColor=Color(0,0,0)) : Point1(thePoint1), Point2(thePoint2), color(theColor) {}
 
 			// ACCESSORS
 		
@@ -29,14 +29,10 @@ namespace CS262 {
 			void setColor(Color theColor) { color = theColor; }
 
 			// FUNCTIONS
-			virtual void draw(System::Drawing::Graphics^) const=0; //Note: You might want to take out the carrot
+			virtual void draw(System::Drawing::Graphics^ g) const = 0;
 			virtual MyShape* makeClone(void) const = 0;
 
-			// Postcondition: Returns true if x and y values are the same,
-			// false otherwise
-		
-
-		private: 
+		protected: 
 			// x and y are represented in our Point class as float to
 			// faciliate calculations.
 			Point Point1, Point2;

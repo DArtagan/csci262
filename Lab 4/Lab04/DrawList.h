@@ -13,13 +13,13 @@ Purpose: typedef is utilized to simplify the declarations of functions and data 
 #include <cstdlib>
 #include "Color.h"
 #include "Point.h"
-#include "MyRect.h"
+#include "MyShape.h"
 
 namespace CS262 {
 	class DrawList {
 		public:
 			// typedefs and constants
-			typedef MyRect value_type;
+			typedef MyShape value_type;
 			typedef std::size_t size_type;
 			static const size_type DEFAULT_CAPACITY = 3;
 
@@ -31,10 +31,10 @@ namespace CS262 {
 			//operators
 			DrawList& operator =(const DrawList& source);
 			void operator ++();
-			value_type operator *() const;
+			value_type* operator *() const;
 
 			//functions
-			void insert(const value_type& entry);
+			void insert(value_type* entry);
 			void reserve(size_type new_size);
 			void remove_last();
 			size_type size() const {return used;}
@@ -42,7 +42,7 @@ namespace CS262 {
 			bool end() const;
 
 		private:
-			value_type **MyRects;
+			value_type **data;
 			size_type used, current_index, capacity;
 	};
 }
