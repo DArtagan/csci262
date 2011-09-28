@@ -1,9 +1,9 @@
 /********************************
 Name: William H. Weiskopf
 Section: A
-Date: September 20, 2011
+Date: September 23, 2011
 
-Purpose: Gain further experience with class creation and use.  Practice the use of namespace for restricting the scope of functions. Also, using inline functions and default arguments to make code cleaner and simpler.  
+Purpose: To create abstract classes that different child classes can inherit from.
 ********************************/
 #pragma once
 #include <iostream>

@@ -1,9 +1,7 @@
 /********************************
 Name: William H. Weiskopf
 Section: A
-Date: September 20, 2011
-
-Purpose: typedef is utilized to simplify the declarations of functions and data types.  The biggest feature of this program is learing dynamic allocation and pointers through the use of an array to store the MyRect objects. Finally, there is the Big Three (constructor, assignment, and destructor).  Creating these is similar to many of the other functions created in this program, but these three are essential for basic class functionallity.  
+Date: September 23, 2011
 ********************************/
 #pragma once
 
