@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exercise 2 - Templates", "Exercise 2 - Templates\Exercise 2 - Templates.vcxproj", "{1B6D307E-83FA-47F2-B10D-FF192B5433B9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exercise 1 - Linked List Class", "Exercise 1 - Linked List Class\Lab05.vcxproj", "{484F95C1-8FC9-4336-BEE2-E8850F24D99F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exercise 3 - Iterators", "Exercise 3 - Iterators\Exercise 3 - Iterators.vcxproj", "{FE358700-B80B-4399-8552-F576C25EF949}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B6D307E-83FA-47F2-B10D-FF192B5433B9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1B6D307E-83FA-47F2-B10D-FF192B5433B9}.Debug|Win32.Build.0 = Debug|Win32
+		{1B6D307E-83FA-47F2-B10D-FF192B5433B9}.Release|Win32.ActiveCfg = Release|Win32
+		{1B6D307E-83FA-47F2-B10D-FF192B5433B9}.Release|Win32.Build.0 = Release|Win32
+		{484F95C1-8FC9-4336-BEE2-E8850F24D99F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{484F95C1-8FC9-4336-BEE2-E8850F24D99F}.Debug|Win32.Build.0 = Debug|Win32
+		{484F95C1-8FC9-4336-BEE2-E8850F24D99F}.Release|Win32.ActiveCfg = Release|Win32
+		{484F95C1-8FC9-4336-BEE2-E8850F24D99F}.Release|Win32.Build.0 = Release|Win32
+		{FE358700-B80B-4399-8552-F576C25EF949}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FE358700-B80B-4399-8552-F576C25EF949}.Debug|Win32.Build.0 = Debug|Win32
+		{FE358700-B80B-4399-8552-F576C25EF949}.Release|Win32.ActiveCfg = Release|Win32
+		{FE358700-B80B-4399-8552-F576C25EF949}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
