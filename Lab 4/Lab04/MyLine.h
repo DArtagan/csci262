@@ -1,9 +1,7 @@
 /********************************
 Name: William H. Weiskopf
 Section: A
-Date: September 20, 2011
-
-Purpose: Gain further experience with class creation and use.  Practice the use of namespace for restricting the scope of functions. Also, using inline functions and default arguments to make code cleaner and simpler.  
+Date: September 23, 2011
 ********************************/
 #pragma once
 
