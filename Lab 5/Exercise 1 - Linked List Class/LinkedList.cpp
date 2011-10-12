@@ -1,4 +1,5 @@
 #include "LinkedList.h"
+#include <iostream>
 
 
 namespace CS262 {
@@ -7,7 +8,7 @@ namespace CS262 {
 		head = 0;
 		tail = 0;
 		node_count = 0;
-		const Node* n;
+		Node* n;
 		n = source.head;
 		while(n != NULL) {
 			insertAtTail(n->data);
@@ -18,7 +19,7 @@ namespace CS262 {
 
 	// Postcondition: All dynamic memory used by the list has been freed
 	LinkedList::~LinkedList() {
-		clearList();
+		
 	}
 	
 	void LinkedList::insertAtHead(const value_type& entry) {
@@ -73,11 +74,11 @@ namespace CS262 {
 	// Postcondition: all nodes are removed from the list and returned
 	// to the heap. head is reset to NULL. 
 	void LinkedList::clearList() {
-		Node* n = head;
-		while(n != NULL) {
-			n = head;
-			head = head->next;
-			delete n;
+		std::cout << head;
+		Node* n(head);
+		for( ; n != NULL; n = n->next) {
+			head = n;
+			delete head;
 		}
 		head = NULL;
 		tail = NULL;
