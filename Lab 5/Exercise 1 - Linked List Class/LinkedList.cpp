@@ -73,15 +73,14 @@ namespace CS262 {
 
 	// Postcondition: all nodes are removed from the list and returned
 	// to the heap. head is reset to NULL. 
-	void LinkedList::clearList() {
-		std::cout << head;
-		Node* n(head);
-		for( ; n != NULL; n = n->next) {
-			head = n;
+	void LinkedList::clearList(){
+		while (head != NULL){
+			Node* temp = head->next;
 			delete head;
+			head = temp;
 		}
-		head = NULL;
 		tail = NULL;
+		head = NULL;
 		node_count = 0;
 	}
 	

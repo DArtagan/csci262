@@ -74,7 +74,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedListTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="Node.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
