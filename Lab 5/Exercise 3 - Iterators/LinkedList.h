@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdlib>
 #include "Node.h"
-
+// #include the iterators
 
 namespace CS262
 {
@@ -9,6 +9,8 @@ namespace CS262
 	class LinkedList
 	{
 	public:
+		typedef node_iterator<Item> iterator
+		typedef const_node_iterator<Item> const_iterator
 		typedef Node<Item>* NodePtr;
 		typedef Node::Item value_type;
 
