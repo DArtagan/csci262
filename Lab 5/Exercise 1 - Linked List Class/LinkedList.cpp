@@ -8,7 +8,7 @@ namespace CS262 {
 		head = 0;
 		tail = 0;
 		node_count = 0;
-		Node* n;
+		NodePtr n;
 		n = source.head;
 		while(n != NULL) {
 			insertAtTail(n->data);
@@ -23,7 +23,7 @@ namespace CS262 {
 	}
 	
 	void LinkedList::insertAtHead(const value_type& entry) {
-		Node* n(head);
+		NodePtr n(head);
 		head = new Node(entry, head, NULL);
 		if(node_count == 0) {
 			tail = head;
@@ -36,7 +36,7 @@ namespace CS262 {
 	// Postcondition: Entry has been inserted into a new node at
 	// the end of the list
 	void LinkedList::insertAtTail(const value_type& entry) {
-		Node* n(tail);
+		NodePtr n(tail);
 		tail = new Node(entry, NULL, tail);
 		if(node_count == 0) {
 			head = tail;
@@ -50,7 +50,7 @@ namespace CS262 {
 	// removed and removeFromList returns true. If target is not in
 	// the list, removeFromList returns false.
 	bool LinkedList::removeFromList(const value_type& target) {
-		Node* n(head);
+		NodePtr n(head);
 		while(n != NULL && n->data != target) {n = n->next;}
 		if(n == NULL) { return false;}
 		if(n->prev == NULL && n->next == NULL) {
@@ -75,7 +75,7 @@ namespace CS262 {
 	// to the heap. head is reset to NULL. 
 	void LinkedList::clearList(){
 		while (head != NULL){
-			Node* temp = head->next;
+			NodePtr temp = head->next;
 			delete head;
 			head = temp;
 		}
