@@ -10,7 +10,7 @@ namespace CS262
 	{
 	public:
 		typedef Node<Item>* NodePtr;
-		typedef Node::Item value_type;
+		typedef Item value_type;
 
 		// Postcondition: An empty linked list has been created
 		LinkedList() : head(NULL), tail(NULL), node_count(0) {}
