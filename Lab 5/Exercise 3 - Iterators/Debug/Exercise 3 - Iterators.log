@@ -1,0 +1,26 @@
+﻿Build started 10/14/2011 6:30:24 PM.
+     1>Project "C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 5\Exercise 3 - Iterators\Exercise 3 - Iterators.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Exercise 3 - Iterators.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Exercise 3 - Iterators.exe.embed.manifest.res" "Debug\Exercise 3 - Iterators_manifest.rc" 
+       Link:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 5\Debug\Exercise 3 - Iterators.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Exercise 3 - Iterators.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 5\Debug\Exercise 3 - Iterators.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 5\Debug\Exercise 3 - Iterators.lib" /MACHINE:X86 "Debug\Exercise 3 - Iterators.exe.embed.manifest.res"
+         Debug\LinkedListTest.obj
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Exercise 3 - Iterators.exe.embed.manifest" /manifest "Debug\Exercise 3 - Iterators.exe.intermediate.manifest"
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Exercise 3 - Iterators.exe.embed.manifest.res" "Debug\Exercise 3 - Iterators_manifest.rc" 
+       LinkEmbedManifest:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 5\Debug\Exercise 3 - Iterators.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Exercise 3 - Iterators.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 5\Debug\Exercise 3 - Iterators.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 5\Debug\Exercise 3 - Iterators.lib" /MACHINE:X86 "Debug\Exercise 3 - Iterators.exe.embed.manifest.res"
+         Debug\LinkedListTest.obj
+         Exercise 3 - Iterators.vcxproj -> C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 5\Debug\Exercise 3 - Iterators.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Exercise 3 - Iterators.unsuccessfulbuild".
+         Touching "Debug\Exercise 3 - Iterators.lastbuildstate".
+     1>Done Building Project "C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 5\Exercise 3 - Iterators\Exercise 3 - Iterators.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.57

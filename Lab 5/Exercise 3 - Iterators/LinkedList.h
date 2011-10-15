@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdlib>
 #include "Node.h"
-// #include the iterators
+#include "NodeIterators.h"
+
 
 namespace CS262
 {
@@ -9,10 +10,10 @@ namespace CS262
 	class LinkedList
 	{
 	public:
-		typedef node_iterator<Item> iterator
-		typedef const_node_iterator<Item> const_iterator
 		typedef Node<Item>* NodePtr;
-		typedef Node::Item value_type;
+		typedef Item value_type;
+		typedef node_iterator<Item> iterator;
+		typedef const_node_iterator<Item> const_iterator;
 
 		// Postcondition: An empty linked list has been created
 		LinkedList() : head(NULL), tail(NULL), node_count(0) {}
@@ -48,6 +49,37 @@ namespace CS262
 		// Postcondition: the current list has been replaced with a copy of
 		// the source linked list. The return value is the calling object
 		LinkedList& operator =(const LinkedList& source);
+
+		// Iterator Stuffs
+		// creates a node_iterator set to the begining of the list 
+		iterator begin() {
+			return iterator(head);
+		}
+
+		// creates a const_node_iterator set to the beginning of the list
+		const_iterator begin() const {
+			return const_iterator(head);
+		}
+
+		// creates a node_iterator set to the very end of the list 
+		iterator end() {
+			return iterator(NULL);
+		}
+
+		// creates a const_node_iterator set to the very end of the list
+		const_iterator end() const {
+			return const_iterator(NULL);
+		}
+
+		// creates a node_iterator set to the last node of the list 
+		iterator rbegin() {
+			return iterator(tail);
+		}
+
+		// creates a const_node_iterator set to the last node of the list
+		const_iterator rbegin() const {
+			return const_iterator(tail);
+		}
 
 	private:
 		NodePtr head;

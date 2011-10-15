@@ -5,7 +5,7 @@
 namespace CS262 {
 	// Postcondition: A copy of the source linked list has been created
 	template <typename Item>
-	LinkedList<Item>::LinkedList<Item>(const LinkedList<Item>& source) {
+	LinkedList<Item>::LinkedList(const LinkedList<Item>& source) {
 		head = 0;
 		tail = 0;
 		node_count = 0;
@@ -20,7 +20,7 @@ namespace CS262 {
 
 	// Postcondition: All dynamic memory used by the list has been freed
 	template <typename Item>
-	LinkedList<Item>::~LinkedList<Item>() {
+	LinkedList<Item>::~LinkedList() {
 		
 	}
 	
@@ -94,7 +94,7 @@ namespace CS262 {
 	LinkedList<Item>& LinkedList<Item>::operator =(const LinkedList<Item>& source) {
 		if(this == &source) return *this;
 
-		const NodePtr n;
+		LinkedList::NodePtr n;
 		if(head != NULL) clearList();
 		n = source.head;
 		while(n != NULL) {
