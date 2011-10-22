@@ -27,32 +27,37 @@ int main() {
 			exit(1);
 	}
 	
-	string element, theName;
-	int theTopSpeed, theAcceleration, theHandling;
-	while( getline(inFileCars,inString.str(),carDelimiter) ) {
-		int i(0);
-		cout << inString.str();
-		while( getline(inString,element,lineDelimiter) ) {
-			cout << element;
-			if(i == 0){
-				cin >> theName;
-			} else {
-				if(element == "Top Speed") {
-					cin >> theTopSpeed;
-					cout << "theTopSpeed";
-				} else if(element == "Acceleration") {
-					cin >> theAcceleration;
-					cout << theAcceleration;
-				} else if(element == "Handling") {
-					cin >> theHandling;
-					cout << theHandling;
-				}
-				i++;
+	string key, theName;
+	int value, theTopSpeed, theAcceleration, theHandling, i(0);
+	
+	while( getline(inFileCars,inString) ) {
+		cout << inString;
+		cout << i%5;
+		size_t delLocation;
+		if(i%5 == 0){
+			theName = inString;
+		} else {
+			delLocation = inString.find(lineDelimiter);
+			key = inString.substr(0, delLocation);
+			//value = inString.substr(delLocation + 2, inString.size() - 1);
+			cout << value;
+			if(key == "Top Speed") {
+				theTopSpeed = value;
+				cout << "theTopSpeed";
+			} else if(key == "Acceleration") {
+				theAcceleration = value;
+				cout << theAcceleration;
+			} else if(key == "Handling") {
+				theHandling = value;
+				cout << theHandling;
 			}
 		}
-		car tempCar(theName, theTopSpeed, theAcceleration, theHandling);
-		cars.insertAtTail(tempCar);
-		cout << "while";
+		i++;
+		if(i%5 == 4) {
+			//car tempCar(theName, theTopSpeed, theAcceleration, theHandling);
+			//cars.insertAtTail(tempCar);
+			cout << "while";
+		}
 	}
 
 	inFileCars.close();
