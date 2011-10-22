@@ -3,7 +3,6 @@
 #include "Node.h"
 #include "NodeIterators.h"
 
-
 namespace CS262
 {
 	template <typename Item>
