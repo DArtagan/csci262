@@ -75,7 +75,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="queen.cpp" />
     <ClCompile Include="queenSolver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="queen.h" />
+    <ClInclude Include="queenSolver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
