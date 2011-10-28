@@ -459,7 +459,7 @@ namespace Lab8 {
 private: System::Void label6_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void runButton_Click(System::Object^  sender, System::EventArgs^  e) {
-			 airportSim();
+			 // Unless you can figure out how to make external functions work here, just put all of our code in here
 		 }
 private: System::Void waitingToLand_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 		 }

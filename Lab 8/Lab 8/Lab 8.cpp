@@ -3,6 +3,7 @@
 #include "stdafx.h"
 #include "Form1.h"
 
+
 using namespace Lab8;
 
 [STAThreadAttribute]
