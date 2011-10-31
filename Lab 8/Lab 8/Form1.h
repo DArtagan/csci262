@@ -2,12 +2,15 @@
 
 namespace Lab8 {
 
+	#include "airportSim.h"
+
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace CS262;
 
 	/// <summary>
 	/// Summary for Form1
@@ -460,6 +463,7 @@ private: System::Void label6_Click(System::Object^  sender, System::EventArgs^  
 		 }
 private: System::Void runButton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 // Unless you can figure out how to make external functions work here, just put all of our code in here
+			 airportSim();
 		 }
 private: System::Void waitingToLand_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 		 }

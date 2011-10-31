@@ -1,6 +1,5 @@
 // Lab 8.cpp : main project file.
 
-#include "stdafx.h"
 #include "Form1.h"
 
 
