@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "PlaneSimRun.h"
 using namespace std;
 

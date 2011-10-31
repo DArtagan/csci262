@@ -1,8 +1,6 @@
 #pragma once
 
-#include "airportSim.cpp"
-
-using namespace std;
+#include "Form1.h"
 
 namespace CS262 {
 	void airportSim();

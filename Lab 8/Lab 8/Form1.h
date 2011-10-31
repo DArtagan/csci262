@@ -10,7 +10,6 @@ namespace Lab8 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	using namespace CS262;
 
 	/// <summary>
 	/// Summary for Form1
