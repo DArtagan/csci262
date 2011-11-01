@@ -1,0 +1,40 @@
+39
+straight
+straight
+straight
+straight
+straight
+straight
+straight
+turn 5
+straight
+straight
+straight
+straight
+straight
+turn 8
+straight
+straight
+straight
+turn 4
+boost 1.5
+straight
+straight
+straight
+straight
+turn 3
+turn 2
+straight
+straight
+straight
+straight
+boost .75
+turn 6
+turn 7
+turn 7
+boost 1.75
+turn 7
+turn 3
+straight
+straight
+straight

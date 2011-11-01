@@ -1,20 +1,22 @@
-﻿Build started 10/21/2011 7:44:04 PM.
+﻿Build started 10/21/2011 9:54:25 PM.
      1>Project "C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 6.new\Lab 6\Lab 6.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Creating "Debug\Lab 6.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\Lab 6.unsuccessfulbuild".
        ClCompile:
-         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt racingGame.cpp
-         racingGame.cpp
-     1>c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 6.new\lab 6\racinggame.cpp(42): error C2440: '<function-style-cast>' : cannot convert from 'std::basic_string<_Elem,_Traits,_Ax>' to 'int'
-                 with
-                 [
-                     _Elem=char,
-                     _Traits=std::char_traits<char>,
-                     _Ax=std::allocator<char>
-                 ]
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt carReader.cpp trackReader.cpp
+         trackReader.cpp
+     1>c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 6.new\lab 6\trackreader.cpp(4): error C2143: syntax error : missing ';' before '<'
+     1>c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 6.new\lab 6\trackreader.cpp(4): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 6.new\lab 6\trackreader.cpp(4): error C2143: syntax error : missing ';' before '{'
+     1>c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 6.new\lab 6\trackreader.cpp(4): error C2447: '{' : missing function header (old-style formal list?)
+         carReader.cpp
+     1>c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 6.new\lab 6\carreader.cpp(4): error C2143: syntax error : missing ';' before '<'
+     1>c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 6.new\lab 6\carreader.cpp(4): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 6.new\lab 6\carreader.cpp(4): error C2143: syntax error : missing ';' before '{'
+     1>c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 6.new\lab 6\carreader.cpp(4): error C2447: '{' : missing function header (old-style formal list?)
+         Generating Code...
      1>Done Building Project "C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 6.new\Lab 6\Lab 6.vcxproj" (build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:01.03
+Time Elapsed 00:00:01.59
