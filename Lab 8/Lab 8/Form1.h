@@ -2,7 +2,7 @@
 
 namespace Lab8 {
 
-	#include "airportSim.h"
+	#include "PlaneSimRun.h"
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -10,6 +10,8 @@ namespace Lab8 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace std;
+	using namespace CS262;
 
 	/// <summary>
 	/// Summary for Form1
@@ -453,19 +455,18 @@ namespace Lab8 {
 		}
 #pragma endregion
 	private: System::Void groupBox1_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 }
+			}
 	private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
-			 }
+			}
 	private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  e) {
-			 }
+			}
 private: System::Void label6_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
+			}
 private: System::Void runButton_Click(System::Object^  sender, System::EventArgs^  e) {
-			 // Unless you can figure out how to make external functions work here, just put all of our code in here
-			 airportSim();
-		 }
+				RunPlaneSim(Convert::ToInt32(landingTimeTB->Text), Convert::ToInt32(takeoffTimeTB->Text), Convert::ToInt32(airTimeTB->Text), Convert::ToInt32(averageTimeBetweenArrivalsTB->Text), Convert::ToInt32(averageTimeBetweenDeparturesTB->Text), Convert::ToInt32(stepsTB->Text));
+			}
 private: System::Void waitingToLand_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-		 }
+			}
 };
 }
 
