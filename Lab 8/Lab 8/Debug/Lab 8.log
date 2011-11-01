@@ -1,9 +1,166 @@
-﻿Build started 10/31/2011 10:34:26 PM.
-     1>Project "C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 8\Lab 8\Lab 8.vcxproj" on node 2 (clean target(s)).
-     1>_PrepareForClean:
-         Deleting file "Debug\Lab 8.lastbuildstate".
-     1>Done Building Project "C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 8\Lab 8\Lab 8.vcxproj" (clean target(s)).
+﻿Build started 10/31/2011 10:42:29 PM.
+     1>Project "C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 8\Lab 8\Lab 8.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Lab 8.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr:pure /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt AssemblyInfo.cpp "Lab 8.cpp" PlaneSimRun.cpp /clr:nostdlib 
+         AssemblyInfo.cpp
+         Lab 8.cpp
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(244): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(244): error C2039: 'YesNoMaybe' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(244): error C2146: syntax error : missing ';' before identifier 'SA_YesNoMaybe'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(244): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(244): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(245): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(245): error C2039: 'YesNoMaybe' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(245): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(245): error C2146: syntax error : missing ';' before identifier 'SA_Yes'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(245): error C2377: 'Lab8::YesNoMaybe' : redefinition; typedef cannot be overloaded with any other symbol
+                 c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(244) : see declaration of 'Lab8::YesNoMaybe'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(245): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(245): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(245): error C2039: 'Yes' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(245): error C2065: 'Yes' : undeclared identifier
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(246): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(246): error C2039: 'YesNoMaybe' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(246): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(246): error C2146: syntax error : missing ';' before identifier 'SA_No'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(246): error C2086: 'const int Lab8::YesNoMaybe' : redefinition
+                 c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(245) : see declaration of 'Lab8::YesNoMaybe'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(246): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(246): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(246): error C2039: 'No' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(246): error C2065: 'No' : undeclared identifier
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(247): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(247): error C2039: 'YesNoMaybe' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(247): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(247): error C2146: syntax error : missing ';' before identifier 'SA_Maybe'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(247): error C2086: 'const int Lab8::YesNoMaybe' : redefinition
+                 c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(245) : see declaration of 'Lab8::YesNoMaybe'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(247): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(247): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(247): error C2039: 'Maybe' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(247): error C2065: 'Maybe' : undeclared identifier
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(249): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(249): error C2039: 'AccessType' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(249): error C2146: syntax error : missing ';' before identifier 'SA_AccessType'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(249): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(249): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250): error C2039: 'AccessType' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250): error C2146: syntax error : missing ';' before identifier 'SA_NoAccess'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250): error C2377: 'Lab8::AccessType' : redefinition; typedef cannot be overloaded with any other symbol
+                 c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(249) : see declaration of 'Lab8::AccessType'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250): error C2039: 'NoAccess' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250): error C2065: 'NoAccess' : undeclared identifier
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(251): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(251): error C2039: 'AccessType' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(251): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(251): error C2146: syntax error : missing ';' before identifier 'SA_Read'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(251): error C2086: 'const int Lab8::AccessType' : redefinition
+                 c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250) : see declaration of 'Lab8::AccessType'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(251): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(251): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(251): error C2039: 'Read' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(251): error C2065: 'Read' : undeclared identifier
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(252): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(252): error C2039: 'AccessType' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(252): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(252): error C2146: syntax error : missing ';' before identifier 'SA_Write'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(252): error C2086: 'const int Lab8::AccessType' : redefinition
+                 c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250) : see declaration of 'Lab8::AccessType'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(252): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(252): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(252): error C2039: 'Write' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(252): error C2065: 'Write' : undeclared identifier
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(253): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(253): error C2039: 'AccessType' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(253): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(253): error C2146: syntax error : missing ';' before identifier 'SA_ReadWrite'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(253): error C2086: 'const int Lab8::AccessType' : redefinition
+                 c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(250) : see declaration of 'Lab8::AccessType'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(253): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(253): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(253): error C2039: 'ReadWrite' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(253): error C2065: 'ReadWrite' : undeclared identifier
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(256): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(256): error C2039: 'PreAttribute' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(256): error C2146: syntax error : missing ';' before identifier 'SA_Pre'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(256): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(256): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(257): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(257): error C2039: 'PostAttribute' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(257): error C2146: syntax error : missing ';' before identifier 'SA_Post'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(257): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(257): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(258): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(258): error C2039: 'FormatStringAttribute' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(258): error C2146: syntax error : missing ';' before identifier 'SA_FormatString'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(258): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(258): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(259): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(259): error C2039: 'InvalidCheckAttribute' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(259): error C2146: syntax error : missing ';' before identifier 'SA_InvalidCheck'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(259): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(259): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(260): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(260): error C2039: 'SuccessAttribute' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(260): error C2146: syntax error : missing ';' before identifier 'SA_Success'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(260): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(260): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(261): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(261): error C2039: 'PreBoundAttribute' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(261): error C2146: syntax error : missing ';' before identifier 'SA_PreBound'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(261): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(261): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(262): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(262): error C2039: 'PostBoundAttribute' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(262): error C2146: syntax error : missing ';' before identifier 'SA_PostBound'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(262): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(262): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(263): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(263): error C2039: 'PreRangeAttribute' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(263): error C2146: syntax error : missing ';' before identifier 'SA_PreRange'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(263): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(263): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(264): error C3083: 'vc_attributes': the symbol to the left of a '::' must be a type
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(264): error C2039: 'PostRangeAttribute' : is not a member of '`global namespace''
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(264): error C2146: syntax error : missing ';' before identifier 'SA_PostRange'
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(264): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\program files\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(264): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(19): error C2039: 'div_t' : is not a member of '`global namespace''
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(19): error C2873: 'div_t' : symbol cannot be used in a using-declaration
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(19): error C2039: 'ldiv_t' : is not a member of '`global namespace''
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(19): error C2873: 'ldiv_t' : symbol cannot be used in a using-declaration
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(21): error C2039: 'abort' : is not a member of '`global namespace''
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(21): error C2873: 'abort' : symbol cannot be used in a using-declaration
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(21): error C2039: 'abs' : is not a member of '`global namespace''
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(21): error C2873: 'abs' : symbol cannot be used in a using-declaration
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(22): error C2039: 'atof' : is not a member of '`global namespace''
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(22): error C2873: 'atof' : symbol cannot be used in a using-declaration
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(22): error C2039: 'atoi' : is not a member of '`global namespace''
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(22): error C2873: 'atoi' : symbol cannot be used in a using-declaration
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(22): error C2039: 'atol' : is not a member of '`global namespace''
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(22): error C2873: 'atol' : symbol cannot be used in a using-declaration
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(23): error C2039: 'bsearch' : is not a member of '`global namespace''
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(23): error C2873: 'bsearch' : symbol cannot be used in a using-declaration
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(23): error C2039: 'calloc' : is not a member of '`global namespace''
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(23): error C2873: 'calloc' : symbol cannot be used in a using-declaration
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(23): error C2039: 'div' : is not a member of '`global namespace''
+     1>c:\Program Files\Microsoft Visual Studio 10.0\VC\include\cstdlib(23): fatal error C1003: error count exceeds 100; stopping compilation
+         PlaneSimRun.cpp
+     1>c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 8\lab 8\PlaneSimRun.h(13): error C2248: 'Plane::waitingTime' : cannot access private member declared in class 'Plane'
+                 c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 8\lab 8\Plane.h(10) : see declaration of 'Plane::waitingTime'
+                 c:\documents and settings\thewillman\desktop\willy\school\csci262\lab 8\lab 8\Plane.h(3) : see declaration of 'Plane'
+     1>PlaneSimRun.cpp(48): error C2676: binary '++' : 'Plane' does not define this operator or a conversion to a type acceptable to the predefined operator
+         Generating Code...
+     1>Done Building Project "C:\Documents and Settings\TheWillMan\Desktop\Willy\School\csci262\Lab 8\Lab 8\Lab 8.vcxproj" (build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.20
+Time Elapsed 00:00:03.75
