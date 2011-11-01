@@ -1,0 +1,5 @@
+How would you implement a priority queue?
+
+For my version, implementing a priority queue would require keeping a queue that was always in order so that the highest priorities are always on top.  The best way would probably by using a linked list, where the new item is placed in the linked list at just in front of where the next lowest priority item lies.
+
+A priority queue is a queue but items with higher priority are given precedence and thus served first.

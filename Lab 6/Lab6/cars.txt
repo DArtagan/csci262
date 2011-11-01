@@ -1,0 +1,15 @@
+Batmobile:
+Top Speed: 10
+Acceleration: 4
+Handling: 5
+:
+Tofumobile:
+Top Speed: 5
+Acceleration: 1
+Handling: 0
+:
+Blimp:
+Top Speed: 1
+Acceleration: 1
+Handling: 1000
+:
