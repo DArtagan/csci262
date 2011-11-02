@@ -1,8 +1,7 @@
 #pragma once
+	#include "PlaneSimRun.h"
 
 namespace Lab8 {
-
-	#include "PlaneSimRun.h"
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -463,7 +462,14 @@ namespace Lab8 {
 private: System::Void label6_Click(System::Object^  sender, System::EventArgs^  e) {
 			}
 private: System::Void runButton_Click(System::Object^  sender, System::EventArgs^  e) {
+				double values[6];
 				RunPlaneSim(Convert::ToInt32(landingTimeTB->Text), Convert::ToInt32(takeoffTimeTB->Text), Convert::ToInt32(airTimeTB->Text), Convert::ToInt32(averageTimeBetweenArrivalsTB->Text), Convert::ToInt32(averageTimeBetweenDeparturesTB->Text), Convert::ToInt32(stepsTB->Text));
+				departuresTB->Text = Convert::ToString(values[0]);
+				arrivalsTB->Text =  Convert::ToString(values[1]);
+				waitingToTakeoffTB->Text = Convert::ToString(values[2]);
+				waitingToLandTB->Text = Convert::ToString(values[3]);
+				averageTakeoffWaitTB->Text = Convert::ToString(values[4]);
+				averageLandWaitTB->Text = Convert::ToString(values[5]);
 			}
 private: System::Void waitingToLand_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 			}
