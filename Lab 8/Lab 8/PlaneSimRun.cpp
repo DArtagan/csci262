@@ -11,7 +11,7 @@ namespace CS262{
 		//double* pointer = &values;
 		ofstream text("log.txt");
 		text << "Begin Simulation" << endl;
-		//if (!text) { cout << "Failed to open log.txt" << endl; exit(1);}
+		if (!text) { exit(1);}
 		for (int i = 0; i < TotalTime; i++){
 			if (!(i%arrivalInterval)){
 				landings.push(soars);
@@ -21,21 +21,22 @@ namespace CS262{
 				takingoffs.push(soars);
 				text << i << " Plane enters queue to takeoff." << endl;
 			}
-			if (!tarmack && !landings.empty()) {
+			if (tarmack <= 0 && !landings.empty()) {
 				Arrivals++;
 				AverageLandWait = AverageLandWait*(Arrivals-1)/Arrivals + landings.front().getWait()/Arrivals;
 				landings.pop();
 				tarmack = landTime;
 				text << i << " Plane starts to land." << endl;
-			} else if (!tarmack && !takingoffs.empty()) {
+			} else if (tarmack <= 0 && !takingoffs.empty()) {
 				Departures++;
 				AverageTakeWait = AverageTakeWait*(Departures-1)/Departures + takingoffs.front().getWait()/Departures;
-				landings.pop();
+				takingoffs.pop();
 				tarmack = takeoffTime;
 				text << i << " Plane starts to takeoff." << endl;
 			}
 			landings = incrementPlanes(landings, Crashes, MaxAirTime, text, i);
-			takingoffs = incrementPlanes(takingoffs, Crashes, 1000000000, text, i);
+			takingoffs = incrementPlanes(takingoffs, Crashes, -1, text, i);
+			tarmack--;
 		}
 		Waitingforland =landings.size();
 		Waitingfortakeoff = takingoffs.size();
@@ -55,7 +56,7 @@ namespace CS262{
 		queue<Plane> newqp;
 		while (!ps.empty()) {
 			ps.front().setWait(ps.front().getWait()+1);
-			if (ps.front().getWait() >= MaxAirTime) {
+			if (MaxAirTime > -1 && ps.front().getWait() >= MaxAirTime) {
 				Crashes++;
 				text << i << " A plane has crashed." << endl;
 				ps.pop();
