@@ -2,13 +2,13 @@
 using namespace std;
 
 namespace CS262{
-	double* RunPlaneSim(int landTime, int takeoffTime, int MaxAirTime, int arrivalInterval, int departInterval, int TotalTime){
+	void RunPlaneSim(double values[], int landTime, int takeoffTime, int MaxAirTime, int arrivalInterval, int departInterval, int TotalTime){
 		queue<Plane> landings, takingoffs;
 		Plane soars;
 		int tarmack(0), Departures(0), Arrivals(0), Crashes(0), Waitingfortakeoff(0), Waitingforland(0);
 		double AverageTakeWait(0), AverageLandWait(0);
-		double values[6];
-		double* pointer = &values;
+		//double values[6];
+		//double* pointer = &values;
 		ofstream text("log.txt");
 		text << "Begin Simulation" << endl;
 		//if (!text) { cout << "Failed to open log.txt" << endl; exit(1);}
@@ -48,13 +48,13 @@ namespace CS262{
 		values[3] = Waitingforland;
 		values[4] = AverageTakeWait;
 		values[5] = AverageLandWait;
-		return pointer;
+		values[6] = Crashes;
 	}
 
 	queue<Plane> incrementPlanes(queue<Plane> ps, int& Crashes, const int& MaxAirTime, ofstream& text, int i) {
 		queue<Plane> newqp;
 		while (!ps.empty()) {
-			++ps.front();
+			ps.front().setWait(ps.front().getWait()+1);
 			if (ps.front().getWait() >= MaxAirTime) {
 				Crashes++;
 				text << i << " A plane has crashed." << endl;
