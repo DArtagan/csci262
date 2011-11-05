@@ -2,10 +2,12 @@
 
 using namespace std;
 
-int gcd(int x, int y) {
-	if((x % y) == 0) {
-		return y;
-	} else {
-		gcd(y, (x % y));
+namespace CS262 {
+	int gcd(const unsigned int x, const unsigned int y) {
+		if((x % y) == 0) {
+			return y;
+		} else {
+			gcd(y, (x % y));
+		}
 	}
 }
