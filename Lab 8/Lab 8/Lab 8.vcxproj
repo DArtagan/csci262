@@ -86,24 +86,16 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="airportSim.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Lab 8.cpp" />
-    <ClCompile Include="PlaneSimRun.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="PlaneSimRun.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="airportSim.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Plane.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="PlaneSimRun.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="PlaneSimRun.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
