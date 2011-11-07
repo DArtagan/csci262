@@ -1,8 +1,7 @@
 #pragma once
+	#include "PlaneSimRun.h"
 
 namespace Lab8 {
-
-	#include "airportSim.h"
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -10,6 +9,8 @@ namespace Lab8 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace std;
+	using namespace CS262;
 
 	/// <summary>
 	/// Summary for Form1
@@ -101,6 +102,10 @@ namespace Lab8 {
 	private: System::Windows::Forms::ToolStripMenuItem^  fileToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^  exitToolStripMenuItem;
 	private: System::Windows::Forms::Button^  runButton;
+	private: System::Windows::Forms::TextBox^  crashesTB;
+
+	private: System::Windows::Forms::Label^  label13;
+
 
 
 
@@ -135,6 +140,8 @@ namespace Lab8 {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->simulationParameters = (gcnew System::Windows::Forms::GroupBox());
 			this->simulationResults = (gcnew System::Windows::Forms::GroupBox());
+			this->crashesTB = (gcnew System::Windows::Forms::TextBox());
+			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->averageLandWaitTB = (gcnew System::Windows::Forms::TextBox());
 			this->averageTakeoffWaitTB = (gcnew System::Windows::Forms::TextBox());
@@ -271,7 +278,7 @@ namespace Lab8 {
 			this->simulationParameters->Controls->Add(this->landingTimeTB);
 			this->simulationParameters->Location = System::Drawing::Point(12, 37);
 			this->simulationParameters->Name = L"simulationParameters";
-			this->simulationParameters->Size = System::Drawing::Size(347, 166);
+			this->simulationParameters->Size = System::Drawing::Size(347, 170);
 			this->simulationParameters->TabIndex = 1;
 			this->simulationParameters->TabStop = false;
 			this->simulationParameters->Tag = L"";
@@ -280,6 +287,8 @@ namespace Lab8 {
 			// 
 			// simulationResults
 			// 
+			this->simulationResults->Controls->Add(this->crashesTB);
+			this->simulationResults->Controls->Add(this->label13);
 			this->simulationResults->Controls->Add(this->label7);
 			this->simulationResults->Controls->Add(this->averageLandWaitTB);
 			this->simulationResults->Controls->Add(this->averageTakeoffWaitTB);
@@ -294,16 +303,32 @@ namespace Lab8 {
 			this->simulationResults->Controls->Add(this->departuresTB);
 			this->simulationResults->Location = System::Drawing::Point(12, 224);
 			this->simulationResults->Name = L"simulationResults";
-			this->simulationResults->Size = System::Drawing::Size(347, 166);
+			this->simulationResults->Size = System::Drawing::Size(347, 202);
 			this->simulationResults->TabIndex = 2;
 			this->simulationResults->TabStop = false;
 			this->simulationResults->Tag = L"";
 			this->simulationResults->Text = L"Simulation Results";
 			// 
+			// crashesTB
+			// 
+			this->crashesTB->Location = System::Drawing::Point(241, 71);
+			this->crashesTB->Name = L"crashesTB";
+			this->crashesTB->Size = System::Drawing::Size(100, 20);
+			this->crashesTB->TabIndex = 13;
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(6, 74);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(45, 13);
+			this->label13->TabIndex = 12;
+			this->label13->Text = L"Crashes";
+			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(6, 146);
+			this->label7->Location = System::Drawing::Point(6, 170);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(107, 13);
 			this->label7->TabIndex = 11;
@@ -311,21 +336,21 @@ namespace Lab8 {
 			// 
 			// averageLandWaitTB
 			// 
-			this->averageLandWaitTB->Location = System::Drawing::Point(241, 143);
+			this->averageLandWaitTB->Location = System::Drawing::Point(241, 167);
 			this->averageLandWaitTB->Name = L"averageLandWaitTB";
 			this->averageLandWaitTB->Size = System::Drawing::Size(100, 20);
 			this->averageLandWaitTB->TabIndex = 6;
 			// 
 			// averageTakeoffWaitTB
 			// 
-			this->averageTakeoffWaitTB->Location = System::Drawing::Point(241, 119);
+			this->averageTakeoffWaitTB->Location = System::Drawing::Point(241, 143);
 			this->averageTakeoffWaitTB->Name = L"averageTakeoffWaitTB";
 			this->averageTakeoffWaitTB->Size = System::Drawing::Size(100, 20);
 			this->averageTakeoffWaitTB->TabIndex = 4;
 			// 
 			// waitingToLandTB
 			// 
-			this->waitingToLandTB->Location = System::Drawing::Point(241, 95);
+			this->waitingToLandTB->Location = System::Drawing::Point(241, 119);
 			this->waitingToLandTB->Name = L"waitingToLandTB";
 			this->waitingToLandTB->Size = System::Drawing::Size(100, 20);
 			this->waitingToLandTB->TabIndex = 2;
@@ -333,7 +358,7 @@ namespace Lab8 {
 			// 
 			// waitingToTakeoffTB
 			// 
-			this->waitingToTakeoffTB->Location = System::Drawing::Point(241, 71);
+			this->waitingToTakeoffTB->Location = System::Drawing::Point(241, 95);
 			this->waitingToTakeoffTB->Name = L"waitingToTakeoffTB";
 			this->waitingToTakeoffTB->Size = System::Drawing::Size(100, 20);
 			this->waitingToTakeoffTB->TabIndex = 10;
@@ -341,7 +366,7 @@ namespace Lab8 {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(6, 122);
+			this->label8->Location = System::Drawing::Point(6, 146);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(123, 13);
 			this->label8->TabIndex = 9;
@@ -357,7 +382,7 @@ namespace Lab8 {
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(6, 98);
+			this->label9->Location = System::Drawing::Point(6, 122);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(81, 13);
 			this->label9->TabIndex = 7;
@@ -366,7 +391,7 @@ namespace Lab8 {
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(6, 74);
+			this->label10->Location = System::Drawing::Point(6, 98);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(97, 13);
 			this->label10->TabIndex = 5;
@@ -421,7 +446,7 @@ namespace Lab8 {
 			// 
 			// runButton
 			// 
-			this->runButton->Location = System::Drawing::Point(12, 396);
+			this->runButton->Location = System::Drawing::Point(7, 432);
 			this->runButton->Name = L"runButton";
 			this->runButton->Size = System::Drawing::Size(346, 25);
 			this->runButton->TabIndex = 4;
@@ -433,7 +458,7 @@ namespace Lab8 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(371, 427);
+			this->ClientSize = System::Drawing::Size(371, 469);
 			this->Controls->Add(this->runButton);
 			this->Controls->Add(this->simulationResults);
 			this->Controls->Add(this->simulationParameters);
@@ -453,19 +478,26 @@ namespace Lab8 {
 		}
 #pragma endregion
 	private: System::Void groupBox1_Enter(System::Object^  sender, System::EventArgs^  e) {
-			 }
+			}
 	private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
-			 }
+			}
 	private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  e) {
-			 }
+			}
 private: System::Void label6_Click(System::Object^  sender, System::EventArgs^  e) {
-		 }
+			}
 private: System::Void runButton_Click(System::Object^  sender, System::EventArgs^  e) {
-			 // Unless you can figure out how to make external functions work here, just put all of our code in here
-			 airportSim();
-		 }
+				double values[7];
+				RunPlaneSim(values, Convert::ToInt32(landingTimeTB->Text), Convert::ToInt32(takeoffTimeTB->Text), Convert::ToInt32(airTimeTB->Text), Convert::ToInt32(averageTimeBetweenArrivalsTB->Text), Convert::ToInt32(averageTimeBetweenDeparturesTB->Text), Convert::ToInt32(stepsTB->Text));
+				departuresTB->Text = Convert::ToString(values[0]);
+				arrivalsTB->Text =  Convert::ToString(values[1]);
+				waitingToTakeoffTB->Text = Convert::ToString(values[2]);
+				waitingToLandTB->Text = Convert::ToString(values[3]);
+				averageTakeoffWaitTB->Text = Convert::ToString(values[4]);
+				averageLandWaitTB->Text = Convert::ToString(values[5]);
+				crashesTB->Text = Convert::ToString(values[6]);
+			}
 private: System::Void waitingToLand_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-		 }
+			}
 };
 }
 

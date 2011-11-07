@@ -1,12 +1,13 @@
 #pragma once
-#include "Plane.h"
+#include <cstdlib>
 #include <queue>
 #include <random>
 #include <fstream>
 #include <iostream>
-#include "stdafx.h"
+#include "Plane.h"
 using namespace std;
 
-int RunPlaneSim(int landTime, int takeoffTime, int MaxAirTime, int arrivalInterval, int departInterval, int TotalTime);
-queue<Plane> incrementPlanes(queue<Plane>, int& Crashes, const int& MaxAirTime, ofstream&, int i);
-int operator ++(Plane& p){return p.waitingTime++;}
+namespace CS262 {
+	void RunPlaneSim(double values[], int landTime, int takeoffTime, int MaxAirTime, int arrivalInterval, int departInterval, int TotalTime);
+	queue<Plane> incrementPlanes(queue<Plane>, int& Crashes, const int& MaxAirTime, ofstream&, int i);
+}

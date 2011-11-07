@@ -1,0 +1,43 @@
+Begin Simulation
+0 Plane enters queue to land.
+0 Plane enters queue to takeoff.
+0 Plane starts to land.
+5 Plane starts to takeoff.
+23 Plane enters queue to takeoff.
+39 Plane starts to takeoff.
+43 Plane enters queue to land.
+46 Plane enters queue to takeoff.
+69 Plane enters queue to takeoff.
+73 Plane starts to land.
+78 Plane starts to takeoff.
+86 Plane enters queue to land.
+92 Plane enters queue to takeoff.
+112 Plane starts to land.
+115 Plane enters queue to takeoff.
+117 Plane starts to takeoff.
+129 Plane enters queue to land.
+138 Plane enters queue to takeoff.
+151 Plane starts to land.
+156 Plane starts to takeoff.
+161 Plane enters queue to takeoff.
+172 Plane enters queue to land.
+184 Plane enters queue to takeoff.
+190 Plane starts to land.
+195 Plane starts to takeoff.
+207 Plane enters queue to takeoff.
+215 Plane enters queue to land.
+229 Plane starts to land.
+230 Plane enters queue to takeoff.
+234 Plane starts to takeoff.
+253 Plane enters queue to takeoff.
+258 Plane enters queue to land.
+268 Plane starts to land.
+273 Plane starts to takeoff.
+276 Plane enters queue to takeoff.
+299 Plane enters queue to takeoff.
+301 Plane enters queue to land.
+307 Plane starts to land.
+312 Plane starts to takeoff.
+322 Plane enters queue to takeoff.
+344 Plane enters queue to land.
+End Simulation
