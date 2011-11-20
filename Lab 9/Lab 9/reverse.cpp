@@ -2,12 +2,14 @@
 
 namespace CS262 {
 	string reverse(string a, const unsigned int lowerBound, const unsigned int upBound) {
-		if(lowerBound == upBound) {
-			return a.substr(lowerBound, 1);
-		} else if(lowerBound > upBound){
-			return "";
+		if(lowerBound >= upBound) {
+			return a;
 		} else {
-			return a[upBound] + reverse(a, lowerBound+1, upBound-1) + a[lowerBound];
+			char temp;
+			temp = a[upBound];
+			a[upBound] = a[lowerBound];
+			a[lowerBound] = temp;
+			return reverse(a, lowerBound+1, upBound-1);
 		}
 	}
 }
