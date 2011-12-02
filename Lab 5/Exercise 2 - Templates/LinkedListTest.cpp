@@ -30,20 +30,20 @@ void copy_destroy(LinkedList<double> source) { }
 
 int main( )
 {
-    LinkedList<double> list; // A linked list that we’ll perform tests on
-    char choice;     // A command character entered by the user
+	LinkedList<double> list; // A linked list that we’ll perform tests on
+	char choice;     // A command character entered by the user
 	double value;
-    
-    cout << "I have initialized an empty list of real numbers." << endl;
+	
+	cout << "I have initialized an empty list of real numbers." << endl;
 
-    do
-    {
-        print_menu();
-        choice = toupper(get_user_command());
+	do
+	{
+		print_menu();
+		choice = toupper(get_user_command());
 
-        switch (choice)
-        {
-            case 'I':
+		switch (choice)
+		{
+			case 'I':
 				list.insertAtHead(get_number());
 				break;
 
@@ -51,7 +51,7 @@ int main( )
 				list.insertAtTail(get_number());
 				break;
 
-            case 'R':
+			case 'R':
 				value = get_number();
 				if (list.removeFromList(value))
 					cout << endl << "The item has been removed." << endl;
@@ -77,54 +77,54 @@ int main( )
 				cout << "Assignment done; ensure the list is unchanged" << endl;
 				break;
 
-            case 'Q':
+			case 'Q':
 				break;
 
-            default:
+			default:
 				cout << choice << " is invalid." << endl;
-        }
-    }
-    while ((choice != 'Q'));
+		}
+	}
+	while ((choice != 'Q'));
 
-    return EXIT_SUCCESS;
+	return EXIT_SUCCESS;
 }
 
 
 void print_menu() {
-    cout << endl; // Print blank line before the menu
-    cout << "The following choices are available: " << endl;
-    cout << "  I   Insert a number at the beginning of the list" << endl;
+	cout << endl; // Print blank line before the menu
+	cout << "The following choices are available: " << endl;
+	cout << "  I   Insert a number at the beginning of the list" << endl;
 	cout << "  T   Insert a number at the end of the list" << endl;
-    cout << "  R   Remove a number from the list" << endl;
+	cout << "  R   Remove a number from the list" << endl;
 	cout << "  C   Clear the list" << endl;
 	cout << "  S   Display list size" << endl;
 	cout << "  X   Create and destroy a copy of the list" << endl;
 	cout << "  =   Test the assignment operator" << endl;
-    cout << "  Q   Quit the program" << endl;
+	cout << "  Q   Quit the program" << endl;
 }
 
 
 char get_user_command() {
-    char command;
+	char command;
 
-    cout << "Enter choice: ";
-    cin >> command; // Input of characters skips blanks and newline character
+	cout << "Enter choice: ";
+	cin >> command; // Input of characters skips blanks and newline character
 	cout << endl;
 
-    return command;
+	return command;
 }
 
 
 double get_number() {
-    double result;
-    
-    cout << "Please enter a number: ";
-    
+	double result;
+	
+	cout << "Please enter a number: ";
+	
 	if (!(cin >> result)) {
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		result = get_number();
 	}
 
-    return result;
+	return result;
 }

@@ -1,0 +1,104 @@
+﻿Build started 12/1/2011 9:45:24 PM.
+     1>Project "C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 10\Lab 10\Lab 10.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\Lab 10.unsuccessfulbuild".
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(115): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(237) : see reference to function template instantiation 'void balanced_insert<int,Item>(CS262::BinarySearchTree<Item> &,const std::vector<_Ty>,int,int)' being compiled
+                 with
+                 [
+                     Item=int,
+                     _Ty=int
+                 ]
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(85) : see reference to function template instantiation 'void test_tree<int,Item>(CS262::BinarySearchTree<Item>,const std::vector<_Ty> &)' being compiled
+                 with
+                 [
+                     Item=int,
+                     _Ty=int
+                 ]
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(130): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(296) : see reference to function template instantiation 'void vector_preorder<int>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+                 with
+                 [
+                     _Ty=int
+                 ]
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(145): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(302) : see reference to function template instantiation 'void vector_inorder<int>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+                 with
+                 [
+                     _Ty=int
+                 ]
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(160): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(308) : see reference to function template instantiation 'void vector_postorder<int>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+                 with
+                 [
+                     _Ty=int
+                 ]
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(115): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(237) : see reference to function template instantiation 'void balanced_insert<Person,std::string>(CS262::BinarySearchTree<Item,Key> &,const std::vector<_Ty>,int,int)' being compiled
+                 with
+                 [
+                     Item=Person,
+                     Key=std::string,
+                     _Ty=Person
+                 ]
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(90) : see reference to function template instantiation 'void test_tree<Person,std::string>(CS262::BinarySearchTree<Item,Key>,const std::vector<_Ty> &)' being compiled
+                 with
+                 [
+                     Item=Person,
+                     Key=std::string,
+                     _Ty=Person
+                 ]
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(130): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(296) : see reference to function template instantiation 'void vector_preorder<Person>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+                 with
+                 [
+                     _Ty=Person
+                 ]
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(145): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(302) : see reference to function template instantiation 'void vector_inorder<Person>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+                 with
+                 [
+                     _Ty=Person
+                 ]
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(160): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(308) : see reference to function template instantiation 'void vector_postorder<Person>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+                 with
+                 [
+                     _Ty=Person
+                 ]
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 10\Debug\Lab 10.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Lab 10.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 10\Debug\Lab 10.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 10\Debug\Lab 10.lib" /MACHINE:X86 "Debug\Lab 10.exe.embed.manifest.res"
+         Debug\main.obj
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall CS262::BinarySearchTree<int,int>::~BinarySearchTree<int,int>(void)" (??1?$BinarySearchTree@HH@CS262@@QAE@XZ) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::~BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(void)" (??1?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@QAE@XZ) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(class CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > const &)" (??0?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@QAE@ABV01@@Z) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall CS262::BinarySearchTree<int,int>::BinarySearchTree<int,int>(class CS262::BinarySearchTree<int,int> const &)" (??0?$BinarySearchTree@HH@CS262@@QAE@ABV01@@Z) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(void)" (??0?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@QAE@XZ) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: __thiscall CS262::BinarySearchTree<int,int>::BinarySearchTree<int,int>(void)" (??0?$BinarySearchTree@HH@CS262@@QAE@XZ) referenced in function _main
+     1>main.obj : error LNK2019: unresolved external symbol "public: bool __thiscall CS262::BinarySearchTree<int,int>::apply<void (__cdecl*)(int &)>(int const &,void (__cdecl*)(int &))" (??$apply@P6AXAAH@Z@?$BinarySearchTree@HH@CS262@@QAE_NABHP6AXAAH@Z@Z) referenced in function "void __cdecl test_tree<int,int>(class CS262::BinarySearchTree<int,int>,class std::vector<int,class std::allocator<int> > const&)" (??$test_tree@HH@@YAXV?$BinarySearchTree@HH@CS262@@ABV?$vector@HV?$allocator@H@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: int const & __thiscall CS262::BinarySearchTree<int,int>::max(void)const " (?max@?$BinarySearchTree@HH@CS262@@QBEABHXZ) referenced in function "void __cdecl test_tree<int,int>(class CS262::BinarySearchTree<int,int>,class std::vector<int,class std::allocator<int> > const &)" (??$test_tree@HH@@YAXV?$BinarySearchTree@HH@CS262@@ABV?$vector@HV?$allocator@H@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: int const & __thiscall CS262::BinarySearchTree<int,int>::min(void)const " (?min@?$BinarySearchTree@HH@CS262@@QBEABHXZ) referenced in function "void __cdecl test_tree<int,int>(class CS262::BinarySearchTree<int,int>,class std::vector<int,class std::allocator<int> > const &)" (??$test_tree@HH@@YAXV?$BinarySearchTree@HH@CS262@@ABV?$vector@HV?$allocator@H@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: bool __thiscall CS262::BinarySearchTree<int,int>::remove(int const &)const " (?remove@?$BinarySearchTree@HH@CS262@@QBE_NABH@Z) referenced in function "void __cdecl test_tree<int,int>(class CS262::BinarySearchTree<int,int>,class std::vector<int,class std::allocator<int> > const &)" (??$test_tree@HH@@YAXV?$BinarySearchTree@HH@CS262@@ABV?$vector@HV?$allocator@H@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: int * __thiscall CS262::BinarySearchTree<int,int>::search(int const &)const " (?search@?$BinarySearchTree@HH@CS262@@QBEPAHABH@Z) referenced in function "void __cdecl test_tree<int,int>(class CS262::BinarySearchTree<int,int>,class std::vector<int,class std::allocator<int> > const &)" (??$test_tree@HH@@YAXV?$BinarySearchTree@HH@CS262@@ABV?$vector@HV?$allocator@H@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall CS262::BinarySearchTree<int,int>::insert(int const &)" (?insert@?$BinarySearchTree@HH@CS262@@QAEXABH@Z) referenced in function "void __cdecl test_tree<int,int>(class CS262::BinarySearchTree<int,int>,class std::vector<int,class std::allocator<int> > const &)" (??$test_tree@HH@@YAXV?$BinarySearchTree@HH@CS262@@ABV?$vector@HV?$allocator@H@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: unsigned int __thiscall CS262::BinarySearchTree<int,int>::height(void)const " (?height@?$BinarySearchTree@HH@CS262@@QBEIXZ) referenced in function "void __cdecl test_tree<int,int>(class CS262::BinarySearchTree<int,int>,class std::vector<int,class std::allocator<int> > const &)" (??$test_tree@HH@@YAXV?$BinarySearchTree@HH@CS262@@ABV?$vector@HV?$allocator@H@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: unsigned int __thiscall CS262::BinarySearchTree<int,int>::size(void)const " (?size@?$BinarySearchTree@HH@CS262@@QBEIXZ) referenced in function "void __cdecl test_tree<int,int>(class CS262::BinarySearchTree<int,int>,class std::vector<int,class std::allocator<int> > const &)" (??$test_tree@HH@@YAXV?$BinarySearchTree@HH@CS262@@ABV?$vector@HV?$allocator@H@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: bool __thiscall CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::apply<void (__cdecl*)(struct Person &)>(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,void (__cdecl*)(struct Person &))" (??$apply@P6AXAAUPerson@@@Z@?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@QAE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@P6AXAAUPerson@@@Z@Z) referenced in function "void __cdecl test_tree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(class CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::vector<struct Person,class std::allocator<struct Person> > const &)" (??$test_tree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@YAXV?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@ABV?$vector@UPerson@@V?$allocator@UPerson@@@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: struct Person const & __thiscall CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::max(void)const " (?max@?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@QBEABUPerson@@XZ) referenced in function "void __cdecltest_tree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(class CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::vector<struct Person,class std::allocator<struct Person> > const &)" (??$test_tree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@YAXV?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@ABV?$vector@UPerson@@V?$allocator@UPerson@@@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: struct Person const & __thiscall CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::min(void)const " (?min@?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@QBEABUPerson@@XZ) referenced in function "void __cdecltest_tree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(class CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::vector<struct Person,class std::allocator<struct Person> > const &)" (??$test_tree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@YAXV?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@ABV?$vector@UPerson@@V?$allocator@UPerson@@@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: bool __thiscall CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::remove(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)const " (?remove@?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@QBE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "void __cdecl test_tree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(class CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::vector<struct Person,class std::allocator<struct Person> > const &)" (??$test_tree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@YAXV?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@ABV?$vector@UPerson@@V?$allocator@UPerson@@@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: struct Person * __thiscall CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::search(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)const " (?search@?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@QBEPAUPerson@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "void __cdecl test_tree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(class CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::vector<struct Person,class std::allocator<struct Person> > const &)" (??$test_tree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@YAXV?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@ABV?$vector@UPerson@@V?$allocator@UPerson@@@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::insert(struct Person const &)" (?insert@?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@QAEXABUPerson@@@Z) referenced in function "void __cdecl test_tree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(class CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::vector<struct Person,class std::allocator<struct Person> > const &)" (??$test_tree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@YAXV?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@ABV?$vector@UPerson@@V?$allocator@UPerson@@@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: unsigned int __thiscall CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::height(void)const " (?height@?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@QBEIXZ) referenced in function "void __cdecl test_tree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(class CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::vector<struct Person,class std::allocator<struct Person> > const &)" (??$test_tree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@YAXV?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@ABV?$vector@UPerson@@V?$allocator@UPerson@@@std@@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: unsigned int __thiscall CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >::size(void)const " (?size@?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@QBEIXZ) referenced in function "void __cdecl test_tree<structPerson,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(class CS262::BinarySearchTree<struct Person,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::vector<struct Person,class std::allocator<struct Person> > const &)" (??$test_tree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@YAXV?$BinarySearchTree@UPerson@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@CS262@@ABV?$vector@UPerson@@V?$allocator@UPerson@@@std@@@std@@@Z)
+     1>C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 10\Debug\Lab 10.exe : fatal error LNK1120: 22 unresolved externals
+     1>Done Building Project "C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 10\Lab 10\Lab 10.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.72
