@@ -3,19 +3,17 @@
 namespace CS262 {
 	template <typename Item, typename Key>
 		BinarySearchTree<Item, Key>::BinarySearchTree() {
+			root = new TreeNode<Item>(NULL);
 			nodeCount = 0;
-			root = new TreeNode<Item>(Item& data);
-			TreeNode* left = 0;
-			TreeNode* right = 0;
 		}
 	
 	template <typename Item, typename Key>
-		BinarySearchTree<Item, Key>::bool operator <(const Key& L, const Item& R) { 
+		bool BinarySearchTree<Item, Key>::operator <(const Item& R) { 
 			return L < R.name;
 		}
 	
 	template <typename Item, typename Key>
-		BinarySearchTree<Item, Key>::bool operator >(const Key& L, const Item& R) { 
+		bool BinarySearchTree<Item, Key>::operator >(const Item& R) { 
 			return L > R.name;
 		}
 

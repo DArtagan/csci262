@@ -4,11 +4,12 @@ namespace CS262 {
 	template <typename Item, typename Key = Item>
 	class BinarySearchTree {
 		struct TreeNode {
-			TreeNode(const Item& data = Item()) : data(data), left(NULL), right(NULL) {}
-			
+			TreeNode(const Item& data = Item()) :
+				data(data), left(NULL), right(NULL) { }
+
 			Item data;
-			TreeNode* left;
-			TreeNode* right;
+			TreeNode* left;   // left child
+			TreeNode* right;  // right child
 		};
 
 		public:
@@ -16,8 +17,8 @@ namespace CS262 {
 			~BinarySearchTree(void);
 			BinarySearchTree(const BinarySearchTree& source);
 
-			bool operator <(const Key& L, const Item& R);
-			bool operator >(const Key& L, const Item& L);
+			bool operator <(const Item& R);
+			bool operator >(const Item& L);
 
 			std::size_t size() const;
 			std::size_t height() const;
@@ -39,7 +40,7 @@ namespace CS262 {
 				void postorder(Function f);
 
 		private:
-			TreeNode<Item>* root;
+			TreeNode<Item> *root;
 			std::size_t nodeCount;
 			//Matt says consider keeping track of height
 	};
