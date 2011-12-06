@@ -1,11 +1,12 @@
 #pragma once
+#include <cstdlib>
 
 namespace CS262 {
 	template <typename Item, typename Key = Item>
 	class BinarySearchTree {
 		struct TreeNode {
-			TreeNode(const Item& data = Item()) :
-				data(data), left(NULL), right(NULL) { }
+			TreeNode(const Item& data = Item()) : data(data), left(NULL), right(NULL) { }
+			
 
 			Item data;
 			TreeNode* left;   // left child
@@ -17,16 +18,14 @@ namespace CS262 {
 			~BinarySearchTree(void);
 			BinarySearchTree(const BinarySearchTree& source);
 
-			bool operator <(const Item& R);
-			bool operator >(const Item& L);
+			bool insert(const Item& data);
 
 			std::size_t size() const;
 			std::size_t height() const;
 			
 			const Item& min() const;
 			const Item& max() const;
-			
-			void insert(const Item& value);
+
 			bool remove(const Key& key) const;
 			Item* search(const Key& key) const;
 			
@@ -39,8 +38,12 @@ namespace CS262 {
 			template <typename Function>
 				void postorder(Function f);
 
+			bool isLeaf();
+
 		private:
-			TreeNode<Item> *root;
+			void clearTree(TreeNode*& ptr);
+
+			TreeNode *root;
 			std::size_t nodeCount;
 			//Matt says consider keeping track of height
 	};

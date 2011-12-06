@@ -22,35 +22,39 @@ using namespace rel_ops;
 
 // a simple compound data type
 struct Person {
-    string name;
-    int age;
+	string name;
+	int age;
 
-    bool operator <(const Person& other) const { return (name < other.name); }
-    bool operator ==(const Person& other) const { return (name == other.name); }
+	bool operator <(const Person& other) const { return (name < other.name); }
+	bool operator ==(const Person& other) const { return (name == other.name); }
 
-    operator string() const { return name; }
+	operator string() const { return name; }
 };
 
 /**
  * Main routine exercises two versions of your class using simple values...
 **/
 int main() {
-    const size_t NUM_VALUES = 15;
+	const size_t NUM_VALUES = 15;
 
-    // create vectors containing the values to use
-    vector<int> nums(NUM_VALUES);
-    vector<Person> people(NUM_VALUES);
+	// create vectors containing the values to use
+	vector<int> nums(NUM_VALUES);
+	vector<Person> people(NUM_VALUES);
 
-    // populate them with values
-    for (size_t i = 0; i < NUM_VALUES; i++) {
-        nums[i] = people[i].age = i;
-        people[i].name = char('A' + i);
-    }
+	// populate them with values
+	for (size_t i = 0; i < NUM_VALUES; i++) {
+		nums[i] = people[i].age = i;
+		people[i].name = char('A' + i);
+	}
 
-    // create the empty trees
-    TreeType<int> t1;
-    TreeType<Person, string> t2;
+	// create the empty trees
+	TreeType<int> t1;
+	TreeType<Person, string> t2;
 
-    return EXIT_SUCCESS;
+	assert(t1.insert(nums[0]));
+	assert(t2.insert(people[0]));
+	assert(0 == 1);
+
+	system("PAUSE");
+	return 0;
 }
-

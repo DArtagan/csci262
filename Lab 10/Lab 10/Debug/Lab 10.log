@@ -1,28 +1,10 @@
-﻿Build started 12/3/2011 7:56:48 PM.
+﻿Build started 12/6/2011 9:06:07 AM.
      1>Project "C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 10\Lab 10\Lab 10.vcxproj" on node 2 (ClCompile target(s)).
      1>ClCompile:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main2.cpp
          main2.cpp
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.h(43): error C2059: syntax error : '<'
-                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.h(46) : see reference to class template instantiation 'CS262::BinarySearchTree<Item,Key>' being compiled
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.h(43): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.h(43): error C2059: syntax error : '<'
-                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main2.cpp(51) : see reference to class template instantiation 'CS262::BinarySearchTree<Item>' being compiled
-                 with
-                 [
-                     Item=int
-                 ]
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.h(43): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.h(43): error C2059: syntax error : '<'
-                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main2.cpp(52) : see reference to class template instantiation 'CS262::BinarySearchTree<Item,Key>' being compiled
-                 with
-                 [
-                     Item=Person,
-                     Key=std::string
-                 ]
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.h(43): error C2238: unexpected token(s) preceding ';'
-     1>Done Building Project "C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 10\Lab 10\Lab 10.vcxproj" (ClCompile target(s)) -- FAILED.
+     1>Done Building Project "C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 10\Lab 10\Lab 10.vcxproj" (ClCompile target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.27
+Time Elapsed 00:00:00.42
