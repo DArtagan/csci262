@@ -6,8 +6,6 @@ namespace CS262 {
 	class BinarySearchTree {
 		struct TreeNode {
 			TreeNode(const Item& data = Item()) : data(data), left(NULL), right(NULL) { }
-			
-
 			Item data;
 			TreeNode* left;   // left child
 			TreeNode* right;  // right child
@@ -18,34 +16,37 @@ namespace CS262 {
 			~BinarySearchTree(void);
 			BinarySearchTree(const BinarySearchTree& source);
 
-			bool insert(const Item& data);
+			BinarySearchTree& operator =(const BinarySearchTree& RHS);
 
-			std::size_t size() const;
-			std::size_t height() const;
+			void insert(const Item& data);
+			bool remove(const Key& key);
+			Item* search(const Key& key) const;
+			Item* search(const TreeNode* theRoot, const Key& key) const;
+
+			std::size_t size() const { return nodeCount; }
+			std::size_t height(const TreeNode* theRoot = NULL) const;
 			
 			const Item& min() const;
 			const Item& max() const;
 
-			bool remove(const Key& key) const;
-			Item* search(const Key& key) const;
-			
 			template <typename Function>
 				bool apply(const Key& key, Function f);
 			template <typename Function>
-				void preorder(Function f);
+				void preorder(Function f, TreeNode* ptr = NULL);
 			template <typename Function>
-				void inorder(Function f);
+				void inorder(Function f, TreeNode* ptr = NULL);
 			template <typename Function>
-				void postorder(Function f);
-
-			bool isLeaf();
+				void postorder(Function f, TreeNode* ptr = NULL);
 
 		private:
+			void copy(TreeNode* ptr);
 			void clearTree(TreeNode*& ptr);
+			bool removeNode(TreeNode*& ptr, const Key& key);
+			void removeMaxNode(TreeNode*& ptr, Item& data);
+			//TreeNode* recurse(TreeNode*& ptr, const Key& key) const;
 
-			TreeNode *root;
+			TreeNode* root;
 			std::size_t nodeCount;
-			//Matt says consider keeping track of height
 	};
 }
 
