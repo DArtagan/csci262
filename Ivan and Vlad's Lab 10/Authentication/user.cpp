@@ -36,6 +36,40 @@ namespace CS262{
 			return check;
 		}
 
+		bool operator >(const user& one, const user& two)
+		{
+			int count;
+			bool check;
+			if(one.username.size() > two.username.size())
+			{
+				count = two.username.size();
+				check=true;
+			}
+			else
+			{
+				count = one.username.size();
+				check=false;
+			}
+
+			char left;
+			char right;
+
+			for( int i=0; i<count; i++)
+			{
+				left = one.username[i];
+				right = two.username[i];
+				if(left > right)
+				{
+					return true;
+				}
+				else if(left<right)
+				{
+					return false;
+				}
+			}
+			return check;
+		}
+
 
 		bool operator ==(const user& one, const user& two)
 		{

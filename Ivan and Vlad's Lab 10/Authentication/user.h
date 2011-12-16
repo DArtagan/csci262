@@ -24,6 +24,8 @@ namespace CS262
 		//Operators for users
 		friend bool operator <(const user& one, const user& two);
 
+		friend bool operator >(const user& one, const user& two);
+
 		friend bool operator ==(const user& one, const user& two);
 
 		void operator =(const user& input);
@@ -39,5 +41,5 @@ namespace CS262
 		bool password_check(const string& tryone) const;
 	};
 
-	using namespace rel_ops;
+	using namespace std::rel_ops;
 }

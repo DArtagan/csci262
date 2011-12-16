@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C++ Express 2010
+# Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab 10", "Lab 10\Lab 10.vcxproj", "{6A7F63CE-5FB2-4F5B-949E-FEB0897B5FF5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Authentication", "Authentication\Authentication.vcxproj", "{004C06F4-426D-4540-96FB-A520B97243FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{6A7F63CE-5FB2-4F5B-949E-FEB0897B5FF5}.Debug|Win32.Build.0 = Debug|Win32
 		{6A7F63CE-5FB2-4F5B-949E-FEB0897B5FF5}.Release|Win32.ActiveCfg = Release|Win32
 		{6A7F63CE-5FB2-4F5B-949E-FEB0897B5FF5}.Release|Win32.Build.0 = Release|Win32
+		{004C06F4-426D-4540-96FB-A520B97243FC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{004C06F4-426D-4540-96FB-A520B97243FC}.Debug|Win32.Build.0 = Debug|Win32
+		{004C06F4-426D-4540-96FB-A520B97243FC}.Release|Win32.ActiveCfg = Release|Win32
+		{004C06F4-426D-4540-96FB-A520B97243FC}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

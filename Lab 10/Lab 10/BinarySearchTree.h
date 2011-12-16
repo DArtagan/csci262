@@ -18,13 +18,16 @@ namespace CS262 {
 
 			BinarySearchTree& operator =(const BinarySearchTree& RHS);
 
-			void insert(const Item& data);
+			void insert(const Item& value);
+			void insert(const Item& value, TreeNode*&);
 			bool remove(const Key& key);
 			Item* search(const Key& key) const;
-			Item* search(const TreeNode* theRoot, const Key& key) const;
+			Item* search(TreeNode* theRoot, const Key& key) const;
 
 			std::size_t size() const { return nodeCount; }
-			std::size_t height(const TreeNode* theRoot = NULL) const;
+			std::size_t height() const;
+			std::size_t height(const TreeNode*, std::size_t) const;
+
 			
 			const Item& min() const;
 			const Item& max() const;
@@ -32,11 +35,17 @@ namespace CS262 {
 			template <typename Function>
 				bool apply(const Key& key, Function f);
 			template <typename Function>
-				void preorder(Function f, TreeNode* ptr = NULL);
+				void preorder(Function f) { preorder(f, root); }
 			template <typename Function>
-				void inorder(Function f, TreeNode* ptr = NULL);
+				void preorder(Function f, TreeNode*& ptr);
 			template <typename Function>
-				void postorder(Function f, TreeNode* ptr = NULL);
+				void inorder(Function f) { inorder(f, root); }
+			template <typename Function>
+				void inorder(Function f, TreeNode*& ptr);
+			template <typename Function>
+				void postorder(Function f) { postorder(f, root); }
+			template <typename Function>
+				void postorder(Function f, TreeNode*& ptr);
 
 		private:
 			void copy(TreeNode* ptr);

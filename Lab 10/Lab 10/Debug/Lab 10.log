@@ -1,12 +1,12 @@
-﻿Build started 12/11/2011 8:56:03 PM.
+﻿Build started 12/15/2011 2:27:22 PM.
      1>Project "C:\Users\Willy Weiskopf\Willy\School\csci262\Lab 10\Lab 10\Lab 10.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Lab 10.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(115): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
-                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(237) : see reference to function template instantiation 'void balanced_insert<int,Item>(CS262::BinarySearchTree<Item> &,const std::vector<_Ty>,int,int)' being compiled
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(116): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(238) : see reference to function template instantiation 'void balanced_insert<int,Item>(CS262::BinarySearchTree<Item> &,const std::vector<_Ty>,int,int)' being compiled
                  with
                  [
                      Item=int,
@@ -18,26 +18,26 @@
                      Item=int,
                      _Ty=int
                  ]
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(130): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
-                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(296) : see reference to function template instantiation 'void vector_preorder<int>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(131): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(297) : see reference to function template instantiation 'void vector_preorder<int>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
                  with
                  [
                      _Ty=int
                  ]
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(145): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
-                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(302) : see reference to function template instantiation 'void vector_inorder<int>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(146): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(303) : see reference to function template instantiation 'void vector_inorder<int>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
                  with
                  [
                      _Ty=int
                  ]
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(160): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
-                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(308) : see reference to function template instantiation 'void vector_postorder<int>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(161): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(309) : see reference to function template instantiation 'void vector_postorder<int>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
                  with
                  [
                      _Ty=int
                  ]
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(115): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
-                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(237) : see reference to function template instantiation 'void balanced_insert<Person,std::string>(CS262::BinarySearchTree<Item,Key> &,const std::vector<_Ty>,int,int)' being compiled
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(116): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(238) : see reference to function template instantiation 'void balanced_insert<Person,std::string>(CS262::BinarySearchTree<Item,Key> &,const std::vector<_Ty>,int,int)' being compiled
                  with
                  [
                      Item=Person,
@@ -51,34 +51,24 @@
                      Key=std::string,
                      _Ty=Person
                  ]
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(130): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
-                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(296) : see reference to function template instantiation 'void vector_preorder<Person>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(131): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(297) : see reference to function template instantiation 'void vector_preorder<Person>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
                  with
                  [
                      _Ty=Person
                  ]
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(145): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
-                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(302) : see reference to function template instantiation 'void vector_inorder<Person>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(146): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(303) : see reference to function template instantiation 'void vector_inorder<Person>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
                  with
                  [
                      _Ty=Person
                  ]
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(160): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
-                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(308) : see reference to function template instantiation 'void vector_postorder<Person>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
+     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(161): warning C4244: 'initializing' : conversion from 'double' to 'size_t', possible loss of data
+                 c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\main.cpp(309) : see reference to function template instantiation 'void vector_postorder<Person>(std::stringstream &,const std::vector<_Ty>,int,int)' being compiled
                  with
                  [
                      _Ty=Person
                  ]
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.cpp(88): warning C4717: 'CS262::BinarySearchTree<int,int>::height' : recursive on all control paths, function will cause runtime stack overflow
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.cpp(88): warning C4717: 'CS262::BinarySearchTree<Person,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::height' : recursive on all control paths, function will cause runtime stack overflow
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.cpp(123): warning C4717: 'CS262::BinarySearchTree<int,int>::preorder<void (__cdecl*)(int &)>' : recursive on all control paths, function will cause runtime stack overflow
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.cpp(132): warning C4717: 'CS262::BinarySearchTree<int,int>::inorder<void (__cdecl*)(int &)>' : recursive on all control paths, function will cause runtime stack overflow
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.cpp(141): warning C4717: 'CS262::BinarySearchTree<int,int>::postorder<void (__cdecl*)(int &)>' : recursive on all control paths, function will cause runtime stack overflow
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.cpp(123): warning C4717: 'CS262::BinarySearchTree<Person,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::preorder<void (__cdecl*)(Person &)>' : recursive on all control paths, function will cause runtime stack overflow
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.cpp(132): warning C4717: 'CS262::BinarySearchTree<Person,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::inorder<void (__cdecl*)(Person &)>' : recursive on all control paths, function will cause runtime stack overflow
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.cpp(141): warning C4717: 'CS262::BinarySearchTree<Person,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::postorder<void (__cdecl*)(Person &)>' : recursive on all control paths, function will cause runtime stack overflow
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.cpp(81): warning C4715: 'CS262::BinarySearchTree<int,int>::search' : not all control paths return a value
-     1>c:\users\willy weiskopf\willy\school\csci262\lab 10\lab 10\binarysearchtree.cpp(81): warning C4715: 'CS262::BinarySearchTree<Person,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::search' : not all control paths return a value
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
@@ -97,4 +87,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.04
+Time Elapsed 00:00:00.70

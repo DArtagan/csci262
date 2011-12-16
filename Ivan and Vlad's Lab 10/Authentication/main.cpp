@@ -1,4 +1,15 @@
+/**************************************************************/
+// NAME		Ivan Yaremenko, Vlad Yaremenko
+// DATE		12/05/11
+// SECTION	B
+//
+// PURPOSE	The purpose of this assignment is to become more familiar
+//			with binary tree implementation, traversal and use as well 
+//			as to model a simple login operation.
+/**************************************************************/
+
 #include "user.h"
+#include "BST.h"
 #include <cstdlib>
 #include <iostream>
 #include <cassert>
@@ -8,9 +19,24 @@
 using namespace std;
 using namespace CS262;
 
-void output_user(const user& userperson)
+static ofstream outfile;
+
+void output_user(user& userperson)
 {
+	
+	outfile<<userperson.username;
+	outfile<<userperson.password;
+	outfile<<userperson.f_name;
+	outfile<<userperson.l_name;
+	outfile<<"/n";
+}
+
+int main()
+{
+	//Populate tree
 	string usrname, pass, first, last;
+	BST<user, std::string> database;
+	user login;
 
 	ifstream infile("users.txt");
 	if (!infile)
@@ -19,21 +45,16 @@ void output_user(const user& userperson)
         system ("PAUSE");
         exit (1);
     }
-	if(infile)
+
+	while(infile>>usrname>>pass>>first>>last)
 	{
-		infile>>usrname>>pass>>first>>last;
-		user input(usrname, pass, first, last);
-		userperson = input;
+		user* insert_user = new user(usrname, pass, first, last);
+		database.insert(*insert_user);
 	}
+	
+	infile.close();
 
-
-}
-
-int main()
-{
-	//Read in the data into the tree
-
-	//Put that logic in yourself above ^
+	//Enter main sequence
 
 	char cont('f');
 
@@ -47,7 +68,7 @@ int main()
 		cout<<"4: View total number of users"<<endl;
 		cout<<"5: View min and max username"<<endl;
 		cout<<"6: View tree height"<<endl;
-		cout<<"Q: Quit the program"<<endl:
+		cout<<"Q: Quit the program"<<endl;
 		cin>>cont;
 
 		if(cont == 'Q')
@@ -59,20 +80,32 @@ int main()
 		{
 			std::string user_name;
 			std::string user_password;
+			
 		
 			cout<<"Log In:"<<endl;
 			cout<<"Username: ";
 			cin>> user_name;
 			cout<<"Password: ";
-			cin>> user_password:
+			cin>> user_password;
 
-			//Find user_name in tree, if not there return saying:
-			//cout<<"No user with username "<<user_name<<" exists in the database."<<endl;
-			//Else make user "user login;" equal to the found user
 
-			//If the user is found:
-			//if(user_password == login)
-			//cout<<"Welcome "<<login.f_name<<" "<<login.l_name<<"!"<<endl;
+			if(database.search(user_name) == NULL)
+			{
+				cout<< "No user "<<user_name<<" was found in database."<<endl;
+			}
+			else
+			{
+				login = *database.search(user_name);
+
+				if(login.password == user_password)
+				{
+					cout<<"Welcome "<<login.f_name<<" "<<login.l_name<<"!"<<endl;
+				}
+				else
+				{
+					cout<<"Wrong password! Get your passwords straight otherwise Skyrim will shut down...."<<endl;
+				}
+			}
 		}
 		if(cont =='2')
 		{
@@ -87,12 +120,15 @@ int main()
 				cout<<"Enter a new username: ";
 				cin>>user_name;
 				cout<<endl;
-				//Check to see if username is used
-				//If used:
-				//cout<<"Username already in use"<<endl;
-
-				//If not used:
-				//unique = true;
+				
+				if(database.search(user_name) !=NULL)
+				{
+					cout<<"Username already in use"<<endl;
+				}
+				else
+				{
+					unique = true;
+				}
 			}
 			
 			cout<<"Enter a new password: ";
@@ -109,7 +145,7 @@ int main()
 
 			user new_user(user_name,user_password, first_n, last_n);
 
-			//Add the new_user to the search tree
+			database.insert(new_user);
 
 			cout<<"User "<<user_name<<" created!"<<endl;
 		}
@@ -122,37 +158,51 @@ int main()
 			cin>>username;
 			cout<<endl;
 
-			//Check to see if user is in the database
-
-			//If not:
-			//cout<<"User "<<username<<" does not exist."<<endl;
-
-			//If found remove the user
-			//cout<<"User "<<username<<" deleted."<<endl;
+			if(database.search(username) ==NULL)
+			{
+				cout<<"User "<<username<<" does not exist."<<endl;
+			}
+			else
+			{
+				database.remove(username);
+				cout<<"Deleted "<<username<<endl;
+			}
 		}
 
 		if(cont=='4')
 		{
-			int count;//Find the number of users in the tree
+			int count = database.size();//Find the number of users in the tree
 			cout<<"There are "<<count<<" users in this database."<<endl;
 		}
 
 		if(cont=='5')
 		{
 			std::string max, min;
-			//Set max to right most node and min to left most
+			max=database.max().username;
+			min = database.min().username;
 			cout<<"The database contains usernames between "<<min<<" and "<<max<<"."<<endl;
 		}
 
 		if(cont=='6')
 		{
-			int height; //Set this to the height of the tree
+			int height = database.height(); //Set this to the height of the tree
 			cout<<" The height of the tree is "<<height<<"."<<endl;
 		}
 	}
 
-	//Write the tree back to the file
+	ofstream outfile ("users.txt");
+    
+    if (!outfile)
+    {
+        cout << "Error opening output file." << endl;
+        system ("PAUSE");
+        exit (1);
+    }
 
+	user defaulted;
+	database.inorder(output_user);
+
+	outfile.close();
 	return 0;
 }
 

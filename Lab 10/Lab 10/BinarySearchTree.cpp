@@ -28,24 +28,41 @@ namespace CS262 {
 		}
 
 	template <typename Item, typename Key>
-		void BinarySearchTree<Item, Key>::insert(const Item& data) {
-			TreeNode* ptr = root;
-			if(root == NULL) {
-				root = new TreeNode(data);
+		void BinarySearchTree<Item, Key>::insert(const Item& value){
+			if(root==NULL) {
+				root = new TreeNode(value);
 				nodeCount++;
 				return;
 			}
-			while(ptr != NULL) {
-				if(ptr->data == data) {
-					break;
-				} else if(ptr->data > data && ptr->left != NULL) {
-					ptr=ptr->right;
-					break;
-				} else if(ptr->data < data && ptr->right == NULL) {
-					ptr->right = new TreeNode(data);
+			TreeNode* ptr = root;
+			while (ptr!=NULL){
+				if (ptr->data == value) break;
+				else if(ptr->data > value && ptr->left != NULL) ptr=ptr->left;
+				else if (ptr->data > value && ptr->left == NULL){ 
+					ptr->left = new TreeNode(value);
 					nodeCount++;
 					break;
 				}
+				else if (ptr->data < value && ptr->right != NULL) ptr=ptr->right;
+				else if (ptr->data < value && ptr->right ==NULL){
+					ptr->right = new TreeNode(value);
+					nodeCount++;
+					break;
+				}
+			}
+		}
+
+	template <typename Item, typename Key>
+		void BinarySearchTree<Item, Key>::insert(const Item& value, TreeNode*& t) {
+			if (t == NULL) {
+				t = new TreeNode(value);
+				++nodeCount;
+			} else if (value < t->data){
+				insert(value, t->left);
+			} else if (value > t->data){
+				insert(value, t->right);
+			} else {
+				return;
 			}
 		}
 
@@ -64,27 +81,47 @@ namespace CS262 {
 		}
 
 	template <typename Item, typename Key>
-		Item* BinarySearchTree<Item,Key>::search(const TreeNode* theRoot, const Key& key) const {
-			// if the Key is less than the current node
+		Item* BinarySearchTree<Item,Key>::search(TreeNode* theRoot, const Key& key) const {
+			if(theRoot == NULL) return NULL;
 			if(key < theRoot->data) {
-				search(theRoot->left, key);
-			// if the Key is greater than the current node
+				return search(theRoot->left, key);
 			} else if(key > theRoot->data) {
-				search(theRoot->right, key);
-			// otherwise, they're equal
+				return search(theRoot->right, key);
 			} else if(key == theRoot->data) {
-				Item* temp = &(root->data);
+				Item* temp = &(theRoot->data);
 				return temp;
 			} else {
 				return NULL;
 			}
 		}
 
-	template <typename Item, typename Key>
-		std::size_t BinarySearchTree<Item,Key>::height(const TreeNode* theRoot) const{
-			if(theRoot == NULL) theRoot = this->root;
+	/*template <typename Item, typename Key>
+		std::size_t BinarySearchTree<Item,Key>::height(const TreeNode* theRoot) const {
+			if(theRoot == NULL) return 0;
 
 			return 1 + std::max(height(theRoot->left), height(theRoot->right));
+		}*/
+
+	template <typename Item, typename Key>
+		std::size_t BinarySearchTree<Item,Key>::height() const{
+			if (root == NULL) {return 0;}
+			std::size_t count(1);
+			std::size_t lh(height(root->left, count)), rh(height(root->right,count));
+			if (lh > rh) {
+				return lh;
+			}
+			return rh;
+		}
+
+	template <typename Item, typename Key>
+		std::size_t BinarySearchTree<Item,Key>::height(const TreeNode* t, std::size_t count) const{
+			if (t == NULL) {return count;}
+			++count;
+			std::size_t lh(height(t->left, count)), rh(height(t->right,count));
+			if (lh > rh) {
+				return lh;
+			}
+			return rh;
 		}
 
 	template <typename Item, typename Key>
@@ -115,8 +152,8 @@ namespace CS262 {
 
 	template <typename Item, typename Key>
 		template <typename Function>
-			void BinarySearchTree<Item, Key>::preorder(Function f, TreeNode* ptr) {
-				if(ptr == NULL) ptr = this->root;
+			void BinarySearchTree<Item, Key>::preorder(Function f, TreeNode*& ptr) {
+				if(ptr == NULL) return;
 				f(ptr->data);
 				preorder(f, ptr->left);
 				preorder(f, ptr->right);
@@ -124,8 +161,8 @@ namespace CS262 {
 
 	template <typename Item, typename Key>
 		template <typename Function>
-			void BinarySearchTree<Item, Key>::inorder(Function f, TreeNode* ptr) {
-				if(ptr == NULL) ptr = this->root;
+			void BinarySearchTree<Item, Key>::inorder(Function f, TreeNode*& ptr) {
+				if(ptr == NULL) return;
 				inorder(f, ptr->left);
 				f(ptr->data);
 				inorder(f, ptr->right);
@@ -133,8 +170,8 @@ namespace CS262 {
 
 	template <typename Item, typename Key>
 		template <typename Function>
-			void BinarySearchTree<Item, Key>::postorder(Function f, TreeNode* ptr) {
-				if(ptr == NULL) ptr = this->root;
+			void BinarySearchTree<Item, Key>::postorder(Function f, TreeNode*& ptr) {
+				if(ptr == NULL) return;
 				postorder(f, ptr->left);
 				postorder(f, ptr->right);
 				f(ptr->data);
@@ -142,6 +179,7 @@ namespace CS262 {
 	
 	template <typename Item, typename Key>
 		void BinarySearchTree<Item,Key>::copy(TreeNode* ptr){
+			if(ptr == NULL) return;
 			insert(ptr->data);
 			if(ptr->left != NULL) copy(ptr->left);
 			if(ptr->right != NULL) copy(ptr->right);

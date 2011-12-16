@@ -92,6 +92,7 @@ int main() {
 
     // all tests passed
     cout << "Nicely done!" << endl;
+	system("PAUSE");
     return EXIT_SUCCESS;
 }
 
