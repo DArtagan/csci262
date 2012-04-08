@@ -14,6 +14,7 @@ namespace CS262 {
 
 		// Item-Item comparisons
 		friend bool operator <(const User&, const User&);
+		friend bool operator >(const User&, const User&);
 		friend bool operator ==(const User&, const User&);
 
 		// Key-Item comparisons
@@ -24,8 +25,11 @@ namespace CS262 {
 		// Other operators
 		friend ifstream& operator>> (std::ifstream&, User&);
 
-		// Functions
+		// Getters
 		bool authenticate(const string& provided_password) const;
+		string getFirstName() const { return firstName; }
+		string getLastName() const { return lastName; }
+		string getUsername() const { return username; }
 
 	private:
 		std::string username, password, firstName, lastName;

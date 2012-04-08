@@ -37,14 +37,14 @@ namespace CS262 {
 			TreeNode* ptr = root;
 			while (ptr!=NULL){
 				if (ptr->data == value) break;
-				else if(ptr->data > value && ptr->left != NULL) ptr=ptr->left;
-				else if (ptr->data > value && ptr->left == NULL){ 
+				else if(value < ptr->data && ptr->left != NULL) ptr=ptr->left;
+				else if(value < ptr->data && ptr->left == NULL){ 
 					ptr->left = new TreeNode(value);
 					nodeCount++;
 					break;
 				}
-				else if (ptr->data < value && ptr->right != NULL) ptr=ptr->right;
-				else if (ptr->data < value && ptr->right ==NULL){
+				else if(value > ptr->data && ptr->right != NULL) ptr=ptr->right;
+				else if(value > ptr->data && ptr->right == NULL){
 					ptr->right = new TreeNode(value);
 					nodeCount++;
 					break;
@@ -125,14 +125,24 @@ namespace CS262 {
 		}
 
 	template <typename Item, typename Key>
-		const Item& BinarySearchTree<Item,Key>::min() const{
-			TreeNode* ptr = root;
-			while (ptr->left != NULL) ptr=ptr->left;
+		const Item& BinarySearchTree<Item, Key>::min() const{
+			return min(root);
+		}
+
+	template <typename Item, typename Key>
+		const Item& BinarySearchTree<Item, Key>::min(TreeNode* theRoot) const {
+			TreeNode* ptr = theRoot;
+			while (ptr->left != NULL) ptr = ptr->left;
 			return ptr->data;
 		}
 
 	template <typename Item, typename Key>
-		const Item& BinarySearchTree<Item,Key>::max() const{
+		const Item& BinarySearchTree<Item, Key>::max() const{
+			return max(root);
+		}
+
+	template <typename Item, typename Key>
+		const Item& BinarySearchTree<Item,Key>::max(TreeNode* theRoot) const{
 			TreeNode* ptr = root;
 			while (ptr->right != NULL) ptr=ptr->right;
 			return ptr->data;

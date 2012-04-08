@@ -30,7 +30,9 @@ namespace CS262 {
 
 			
 			const Item& min() const;
+			const Item& min(TreeNode* theRoot) const;
 			const Item& max() const;
+			const Item& max(TreeNode* theRoot) const;
 
 			template <typename Function>
 				bool apply(const Key& key, Function f);

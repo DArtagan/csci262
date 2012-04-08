@@ -5,6 +5,10 @@ namespace CS262 {
 		return LHS.username < RHS.username;
 	}
 
+	bool operator >(const User& LHS, const User& RHS) {
+		return LHS.username > RHS.username;
+	}
+
 	bool operator ==(const User& LHS, const User& RHS) {
 		return LHS.username == RHS.username;
 	}
